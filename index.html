@@ -151,9 +151,9 @@
   /* CASE STUDIES */
   .cs{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);margin-bottom:16px;overflow:hidden;transition:border-color .2s}
   .cs[open]{border-color:var(--accent)}
-  .cs summary{list-style:none;cursor:pointer;padding:22px 24px 4px;display:flex;align-items:flex-start;justify-content:space-between;gap:16px}
+  .cs summary{list-style:none;cursor:default;padding:22px 24px 4px;display:flex;align-items:flex-start;justify-content:space-between;gap:16px}
   .cs summary::-webkit-details-marker{display:none}
-
+  .cs-toggle{display:none}
   .cs-head h3{font-size:1.12rem;font-weight:700}
   .cs-head .cs-sub{font-size:.85rem;color:var(--muted);margin-top:6px}
   .cs-head .cs-stack{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px}
@@ -197,7 +197,7 @@
     <p class="intro">
       AI·LLM을 제품에 직접 녹여 만드는 풀스택 개발자입니다. iOS 네이티브부터 Next.js·FastAPI·Django 기반
       웹·백엔드까지 폭넓게 다루며, 최근에는 LLM 기반 반려동물 헬스케어·AI 상담 서비스를 설계·개발하고 있습니다.
-      Cursor·Codex·Claude Code 같은 AI 코딩 도구를 워크플로우에 적극 활용해, 기획부터 출시·운영까지 빠르게 실증하고
+      Codex·Claude Code 같은 AI 코딩 도구를 워크플로우에 적극 활용해, 기획부터 출시·운영까지 빠르게 실증하고
       제품으로 완성하는 것을 지향합니다.
     </p>
     <div class="hero-cta">
@@ -216,7 +216,7 @@
     </div>
     <div class="skill-grid">
       <div class="skill-card reveal">
-        <h3><span class="dot"></span>모바일 (iOS · Flutter)</h3>
+        <h3><span class="dot"></span>모바일 (iOS)</h3>
         <div class="chips"><span class="chip">Flutter</span><span class="chip">Swift</span><span class="chip">Objective-C</span><span class="chip">AVFoundation</span><span class="chip">CoreBluetooth / Beacon</span><span class="chip">NFC</span></div>
       </div>
       <div class="skill-card reveal">
@@ -266,7 +266,7 @@
         <div class="tl-domains"><span class="chip">반려동물</span><span class="chip">LLM</span><span class="chip">CRM</span><span class="chip">CTI</span></div>
       </div>
       <div class="tl-item alt reveal">
-        <div class="tl-top"><span class="tl-company">페츠 주식회사</span><span class="tl-period">2022.07 ~ 2025.12 · 3년 6개월</span></div>
+        <div class="tl-top"><span class="tl-company">페츠 주식회사</span><span class="tl-period">2022.07 ~ 2025.12 · 3년 5개월</span></div>
         <div class="tl-role">대표 (1인 창업) · 기획 &amp; 개발</div>
         <div class="tl-meta"><b>스택</b> · AI(Cursor, Codex, Claude Code, Perplexity, HuggingFace) 활용 — Next.js, Vite.js, Express.js</div>
         <div class="tl-domains"><span class="chip">반려동물</span><span class="chip">어필리에이트</span><span class="chip">영양제</span><span class="chip">검색</span></div>
@@ -278,7 +278,7 @@
         <div class="tl-domains"><span class="chip">정품인증</span><span class="chip">예약</span><span class="chip">실시간 화상상담</span><span class="chip">챗봇 / 알림</span><span class="chip">스케줄러</span></div>
       </div>
       <div class="tl-item alt reveal">
-        <div class="tl-top"><span class="tl-company">케어랩스</span><span class="tl-period">2018.02 ~ 2019.04 · 1년 3개월</span></div>
+        <div class="tl-top"><span class="tl-company">케어랩스</span><span class="tl-period">2018.02 ~ 2019.04 · 1년 2개월</span></div>
         <div class="tl-role">iOS Developer · 신규 / 유지보수</div>
         <div class="tl-meta"><b>스택</b> · Objective-C</div>
         <div class="tl-domains"><span class="chip">소개팅</span><span class="chip">커뮤니티</span><span class="chip">위치기반</span></div>
@@ -359,7 +359,7 @@
 
     <div class="stats" style="margin-top:30px">
       <div class="stat reveal"><div class="num grad-text">30+</div><div class="lbl">직접 개발 · 상용화 프로젝트</div></div>
-      <div class="stat reveal"><div class="num grad-text">12년 차</div><div class="lbl">개발 경력 (2015~현재)</div></div>
+      <div class="stat reveal"><div class="num grad-text">11년</div><div class="lbl">개발 경력 (2015~)</div></div>
       <div class="stat reveal"><div class="num grad-text">5+</div><div class="lbl">도메인 (헬스케어·커머스·상담·AI·반려동물)</div></div>
     </div>
   </div>
@@ -525,7 +525,6 @@
           <div class="cs-sub">2026 · 벳플럭스 · LLM 기반 신규 서비스 개발</div>
           <div class="cs-stack"><span class="chip">Next.js</span><span class="chip">Django</span><span class="chip">LLM</span></div>
         </div>
-        <div class="cs-toggle">+</div>
       </summary>
       <div class="cs-body">
         <div class="step">
@@ -576,7 +575,6 @@
           <div class="cs-sub">2026.05 ~ 2026.06 · 벳플럭스 · DB손해보험 제휴</div>
           <div class="cs-stack"><span class="chip">Next.js</span><span class="chip">FastAPI</span><span class="chip">LLM</span><span class="chip">RAG</span></div>
         </div>
-        <div class="cs-toggle">+</div>
       </summary>
       <div class="cs-body">
         <div class="step">
@@ -626,7 +624,6 @@
           <div class="cs-sub">2020.03 ~ 2021.09 · 풀스택 &amp; Product Owner · iOS · 웹 · 백엔드 전 영역 단독 개발</div>
           <div class="cs-stack"><span class="chip">Swift</span><span class="chip">Node.js</span><span class="chip">Nuxt</span><span class="chip">Agora WebRTC</span><span class="chip">Firestore</span></div>
         </div>
-        <div class="cs-toggle">+</div>
       </summary>
       <div class="cs-body">
         <div class="step">
@@ -676,7 +673,6 @@
           <div class="cs-sub">2026.05 ~ 진행 중 · 벳플럭스 · 유지보수 &amp; 신규 개발</div>
           <div class="cs-stack"><span class="chip">CTI</span><span class="chip">050 안심번호</span><span class="chip">세종텔레콤</span><span class="chip">Kubernetes</span><span class="chip">KT</span><span class="chip">LG U+</span><span class="chip">통화 요약</span></div>
         </div>
-        <div class="cs-toggle">+</div>
       </summary>
       <div class="cs-body">
         <div class="step">
@@ -727,7 +723,6 @@
           <div class="cs-sub">2015 ~ 2017 · 공간소프트 · iOS &amp; 백엔드 · 선병원·차병원·포항성모병원 등</div>
           <div class="cs-stack"><span class="chip">Objective-C</span><span class="chip">PHP</span><span class="chip">Java(JSP)</span><span class="chip">Beacon</span><span class="chip">NFC</span><span class="chip">NicePay</span></div>
         </div>
-        <div class="cs-toggle">+</div>
       </summary>
       <div class="cs-body">
         <div class="step">
