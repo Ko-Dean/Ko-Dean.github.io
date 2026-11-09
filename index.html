@@ -236,7 +236,11 @@
           <p>익명 커뮤니티를 한번 만들어 보고 싶었습니다. 블라인드에 고민을 올리면 고민보다 회사 얘기가 먼저 나오고, AI에게 물어봐도 결국 다른 사람들 생각이 궁금했습니다. 그래서 아는 사람에게 말하기 어려운 고민을 익명으로 올리고, 투표로 의견을 받는 앱을 만들었습니다.</p><p>처음 생각은 라디오처럼 남의 고민을 들으면서 투표하는 것이었는데, 듣기 기능은 아직 넣지 못했습니다. 첫 커밋부터 양쪽 스토어 출시까지 2주 걸렸습니다.</p>
         </div>
         <div class="step">
-          <span class="step-label"><span class="n">2</span>설계</span>
+          <span class="step-label"><span class="n">2</span>역할</span>
+          <p>기획, 디자인, 개발, 스토어 출시, 운영을 혼자 했습니다. 코드는 Claude Code와 Codex를 같이 썼습니다.</p>
+        </div>
+        <div class="step">
+          <span class="step-label"><span class="n">3</span>설계</span>
           <ul>
             <li>투표 용지와 기표 도장을 디자인 소재로 썼습니다.</li>
             <li>선택지에 색을 쓰지 않았습니다. 색 때문에 표가 쏠릴 수 있고, 빨강·파랑은 정당 색처럼 보이기 때문입니다.</li>
@@ -245,12 +249,16 @@
           </ul>
         </div>
         <div class="step">
-          <span class="step-label"><span class="n">3</span>AI 기능</span>
+          <span class="step-label"><span class="n">4</span>AI 기능</span>
           <p>글을 올리면 AI가 이름·연락처 같은 개인정보를 가리고, 카테고리를 붙이고, 비어 있는 선택지를 채웁니다.</p><p>출시 전에 글 223건, 한 줄 105건으로 평가 세트를 만들고 세 번 돌려 보면서 프롬프트를 고쳤습니다. 마지막 회차에서 글 220/223건, 한 줄 105/105건을 통과했고, 위기 글을 잡아내는 비율(재현율)은 0.94에서 0.98로 올랐습니다. 개인정보가 노출된 경우는 0건이었습니다.</p>
         </div>
         <div class="step">
-          <span class="step-label"><span class="n">4</span>구성</span>
+          <span class="step-label"><span class="n">5</span>구성</span>
           <p>Expo 앱, Next.js 웹, Hono API를 pnpm 모노레포로 묶었습니다. Supabase로 시작했다가 출시 직후 Cloudflare D1로 서버를 옮겼는데, API 이름과 응답 형식을 그대로 둬서 앱 코드는 거의 고치지 않았습니다. 앱 업데이트는 R2에 올리는 OTA를 직접 만들어 쓰고 있습니다.</p>
+        </div>
+        <div class="step">
+          <span class="step-label"><span class="n">6</span>결과</span>
+          <p>App Store와 Google Play에 출시해 운영 중입니다. 익명 글에 섞여 들어오는 개인정보와 위기 글을 사람이 일일이 보지 않아도 걸러지게 하는 게 목표였는데, 마지막 평가에서 개인정보 노출 0건, 프롬프트 주입 테스트 16건 모두 차단을 확인했습니다. 평가 세트 한 번 돌리는 비용은 약 0.08달러라 프롬프트를 고칠 때마다 부담 없이 다시 돌릴 수 있었습니다.</p>
         </div>
       </div>
     </details>
@@ -270,11 +278,15 @@
           <p>창업했을 때부터 영양제 어필리에이트에 관심이 많아서 추천 사이트를 하나 만들어 뒀는데, 한동안 손을 놓고 있었습니다. 퇴사한 뒤 방향을 바꿔 직접 운영해 보고 싶어졌고, 그래서 앱까지 만들게 됐습니다. 사이트는 퀴즈로 나에게 맞는 영양제를 찾고, 순위와 비교를 본 뒤 판매처로 넘어가는 구조입니다. 지금은 7개 나라, 5개 언어로 운영하고 있습니다.</p>
         </div>
         <div class="step">
-          <span class="step-label"><span class="n">2</span>앱으로 만든 이유</span>
+          <span class="step-label"><span class="n">2</span>역할</span>
+          <p>기획부터 디자인, 개발, 배포, 운영까지 혼자 했습니다.</p>
+        </div>
+        <div class="step">
+          <span class="step-label"><span class="n">3</span>앱으로 만든 이유</span>
           <p>칼로리를 세는 앱은 많은데 영양소를 보여주는 앱은 드뭅니다. 비타민 D나 철, 마그네슘은 음식으로도 꽤 들어오는데, 그걸 모른 채 영양제를 더 먹으면 상한을 넘기기 쉽습니다.</p><p>그래서 음식으로 먼저 채우고, 부족한 만큼만 영양제로 채우고, 다 떨어지면 다시 사는 흐름이 한 바퀴 돌도록 설계했습니다. 사이트는 고르는 곳, 앱은 기록하는 곳으로 역할을 나눴습니다.</p>
         </div>
         <div class="step">
-          <span class="step-label"><span class="n">3</span>앱의 흐름</span>
+          <span class="step-label"><span class="n">4</span>앱의 흐름</span>
           <ul>
             <li>식사 사진을 찍으면 칼로리와 영양소 7가지가 기록됩니다.</li>
             <li>나라별 권장량과 상한 기준으로 부족한 것과 넘친 것을 보여줍니다.</li>
@@ -284,19 +296,19 @@
           </ul>
         </div>
         <div class="step">
-          <span class="step-label"><span class="n">4</span>데이터 수집</span>
+          <span class="step-label"><span class="n">5</span>데이터 수집</span>
           <p>가격, 평점, 리뷰 수는 iHerb의 나라별 목록에서 매일 한 나라씩 갱신합니다. 성분표는 미국 NIH 영양제 라벨 DB와 Vitacost에서 바코드가 정확히 일치하는 것만 붙였습니다. 이름으로 맞추면 다른 제품의 성분이 섞일 수 있어서입니다.</p><p>11월 9일 기준으로 영양제 28,674개가 있고, 그중 86%에 평점, 80%에 성분 정보가 있습니다. 가격 변동 이력은 4월부터 약 20만 건 쌓였습니다.</p>
         </div>
         <div class="step">
-          <span class="step-label"><span class="n">5</span>추천 기준</span>
+          <span class="step-label"><span class="n">6</span>추천 기준</span>
           <p>카테고리 순위는 판매처 순위와 평점·리뷰 수를 가장 크게(각 35%) 보고, 최신성·가격·재고를 더해 점수를 매깁니다. 퀴즈는 목표, 성별, 체형, 나이, 식단, 생활 습관 6가지 답에 따라 카테고리 점수를 올리고(예: 비건이면 철), 상위 카테고리에서 점수가 높은 제품을 고릅니다.</p><p>권장량과 상한은 한국, 미국·캐나다, 일본, 대만, 태국, 베트남, 호주·뉴질랜드의 공식 섭취기준을 원문에서 직접 옮기고 다시 대조해 확인했습니다.</p>
         </div>
         <div class="step">
-          <span class="step-label"><span class="n">6</span>AI 기능</span>
+          <span class="step-label"><span class="n">7</span>AI 기능</span>
           <p>식사 사진 분석 결과는 정해진 JSON 형식으로만 받고, 합계는 모델 답 대신 코드에서 다시 계산합니다. 처음에는 OpenAI 모델을 썼는데, Claude Max 요금제에 API 크레딧이 포함돼 있었고 비용과 분석 품질을 같이 비교해 보니 Claude Haiku 쪽이 나아서 11월에 옮겼습니다. 지금은 사진 한 장 분석에 9.5초 정도 걸립니다.</p>
         </div>
         <div class="step">
-          <span class="step-label"><span class="n">7</span>구성과 현재</span>
+          <span class="step-label"><span class="n">8</span>구성과 현재</span>
           <p>Next.js 사이트와 Expo 앱이 영양 계산 코드를 같이 씁니다. Vercel과 Supabase에서 시작해 10월에 Cloudflare로 옮겼고, 결제는 RevenueCat과 Paddle을 씁니다. 가격 갱신과 사이트 재빌드는 매일 자동으로 돌아갑니다.</p><p>사이트와 안드로이드 앱은 운영 중이고 iOS는 심사 중입니다. 기능은 빨리 만들었지만 트래픽과 전환은 아직 과제입니다.</p>
         </div>
       </div>
@@ -623,10 +635,11 @@
             <li>질병코드로 보험금 사례를 찾고 가중치 점수로 후보를 추립니다.</li>
             <li>후보 중 상황에 맞는 사례를 LLM이 최종으로 고릅니다.</li>
           </ul>
+          <p>LLM은 처음(키워드 추출)과 끝(최종 선택)에만 쓰고, 가운데 검색은 규칙으로 처리했습니다.</p>
         </div>
         <div class="step">
           <span class="step-label"><span class="n">5</span>결과</span>
-          <p>DB손해보험 제휴 서비스로 약 한 달 만에 개발과 연동을 마쳤습니다. 검색 단계가 규칙 기반이라 같은 증상이면 같은 후보가 나왔고, 결과가 이상할 때 어느 단계에서 틀렸는지 찾기 쉬웠습니다.</p>
+          <p>DB손해보험 제휴 서비스로 약 한 달 만에 개발과 연동을 마쳤습니다. 검색 단계가 규칙 기반이라 같은 증상이면 같은 후보가 나왔고, 결과가 이상할 때 키워드 추출, 코드 변환, 점수 계산, LLM 선택 중 어느 단계에서 틀렸는지 바로 찾을 수 있었습니다.</p>
         </div>
       </div>
     </details>
