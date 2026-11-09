@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>고동욱 | AI Builder</title>
-<meta name="description" content="고동욱 KO DONGUK · AI Builder, 풀스택, iOS 포트폴리오">
+<title>고동욱 | AI Builder · AI Engineer</title>
+<meta name="description" content="고동욱 KO DONGUK · AI Builder, AI Engineer, 풀스택, iOS 포트폴리오">
 <meta name="robots" content="noindex, nofollow, noarchive">
 <style>
   :root{
@@ -196,9 +196,9 @@
 
 <header class="hero">
   <div class="wrap">
-    <span class="en">KO DONGUK · AI BUILDER</span>
+    <span class="en">KO DONGUK · AI BUILDER · AI ENGINEER</span>
     <h1>AI로 만들고, <span class="grad-text">출시하고,</span><br>운영까지 합니다</h1>
-    <p class="role">AI Builder · 풀스택 · iOS</p>
+    <p class="role">AI Builder · AI Engineer · 풀스택 · iOS</p>
     <p class="intro">
       2015년부터 iOS, 웹, 백엔드를 만들어 왔습니다. 요즘은 Claude Code, Codex와 같이 일합니다.
       올해는 혼자 앱 두 개(ifyou, Fitme)를 기획부터 스토어 출시, 운영까지 했고,
@@ -617,6 +617,45 @@
       <p class="cs-note">문제 → 접근 → 어려웠던 점 → 해결 → 결과</p>
     </div>
 
+    <!-- CS 펫블리 -->
+    <details class="cs reveal" open>
+      <summary>
+        <div class="cs-head">
+          <h3>DB손해보험 펫블리 AI 건강상담: 증상 추론과 보험금 사례 매칭</h3>
+          <div class="cs-sub">2026.05 ~ 2026.06 · 벳플럭스 · DB손해보험 제휴</div>
+          <div class="cs-stack"><span class="chip">Next.js</span><span class="chip">FastAPI</span><span class="chip">LLM</span></div>
+        </div>
+      </summary>
+      <div class="cs-body">
+        <div class="step">
+          <span class="step-label"><span class="n">1</span>문제</span>
+          <p>강아지가 아프면 보호자가 궁금한 건 세 가지다. 병원에 당장 가야 하나, 집에서 뭘 해주면 되나, 보험 처리는 되나. 지금까지는 이걸 각각 다른 곳에서 찾아봐야 했다.</p>
+        </div>
+        <div class="step">
+          <span class="step-label"><span class="n">2</span>접근</span>
+          <p>채팅 하나에서 증상을 듣고, 홈케어 가이드를 주고, 비슷한 증상으로 실제 보험금을 받은 사례까지 보여주기로 했다. 증상 추론은 LLM이 맡되 수의학 근거 범위를 벗어난 말은 못 하게 프롬프트와 출력 형식을 묶었다.</p>
+        </div>
+        <div class="step">
+          <span class="step-label"><span class="n">3</span>RAG를 안 쓴 이유</span>
+          <p>고객사 요청은 RAG였다. 그런데 보험금 사례 데이터가 10만 건이 안 됐다. 이 규모면 임베딩하고 벡터 DB를 붙이는 것보다 직접 매칭하는 쪽이 빠르고 싸다. 무엇보다 "왜 이 사례가 나왔는지"를 설명할 수 있어야 보험사도 보호자도 믿는다고 봤다. 그래서 검색은 알고리즘으로 짜고 LLM은 앞뒤에만 붙였다.</p>
+        </div>
+        <div class="step">
+          <span class="step-label"><span class="n">4</span>매칭 방식</span>
+          <ul>
+            <li>LLM이 대화에서 증상 키워드를 뽑는다</li>
+            <li>키워드를 질병코드로 바꾼다</li>
+            <li>질병코드로 보험금 사례를 찾고 가중치 점수를 매겨 후보를 추린다</li>
+            <li>상위 후보 중 실제 상황에 맞는 사례를 LLM이 마지막으로 고른다</li>
+          </ul>
+          <p>중간 단계가 결정적이라 같은 증상이면 같은 후보가 나온다. 결과가 이상하면 어느 단계에서 틀렸는지 바로 보인다.</p>
+        </div>
+        <div class="step">
+          <span class="step-label"><span class="n">5</span>결과</span>
+          <p>증상 상담, 홈케어, 보험 사례가 한 채팅으로 이어지는 상담을 DB손해보험 제휴 서비스로 약 한 달 만에 개발하고 연동까지 끝냈다.</p>
+        </div>
+      </div>
+    </details>
+
     <!-- CS 늘펫케어 -->
     <details class="cs reveal" open>
       <summary>
@@ -663,45 +702,6 @@
             <li>AI 도구를 활용하되 LLM 추천 흐름·근거 제약 설계는 직접 판단해 구현</li>
             <li>수의학적 추천 + 병원 연결이라는 반려동물 헬스케어 흐름을 서비스화</li>
           </ul>
-        </div>
-      </div>
-    </details>
-
-    <!-- CS 펫블리 -->
-    <details class="cs reveal" open>
-      <summary>
-        <div class="cs-head">
-          <h3>DB손해보험 펫블리 AI 건강상담: 증상 추론과 보험금 사례 매칭</h3>
-          <div class="cs-sub">2026.05 ~ 2026.06 · 벳플럭스 · DB손해보험 제휴</div>
-          <div class="cs-stack"><span class="chip">Next.js</span><span class="chip">FastAPI</span><span class="chip">LLM</span></div>
-        </div>
-      </summary>
-      <div class="cs-body">
-        <div class="step">
-          <span class="step-label"><span class="n">1</span>문제</span>
-          <p>강아지가 아프면 보호자가 궁금한 건 세 가지다. 병원에 당장 가야 하나, 집에서 뭘 해주면 되나, 보험 처리는 되나. 지금까지는 이걸 각각 다른 곳에서 찾아봐야 했다.</p>
-        </div>
-        <div class="step">
-          <span class="step-label"><span class="n">2</span>접근</span>
-          <p>채팅 하나에서 증상을 듣고, 홈케어 가이드를 주고, 비슷한 증상으로 실제 보험금을 받은 사례까지 보여주기로 했다. 증상 추론은 LLM이 맡되 수의학 근거 범위를 벗어난 말은 못 하게 프롬프트와 출력 형식을 묶었다.</p>
-        </div>
-        <div class="step">
-          <span class="step-label"><span class="n">3</span>RAG를 안 쓴 이유</span>
-          <p>고객사 요청은 RAG였다. 그런데 보험금 사례 데이터가 10만 건이 안 됐다. 이 규모면 임베딩하고 벡터 DB를 붙이는 것보다 직접 매칭하는 쪽이 빠르고 싸다. 무엇보다 "왜 이 사례가 나왔는지"를 설명할 수 있어야 보험사도 보호자도 믿는다고 봤다. 그래서 검색은 알고리즘으로 짜고 LLM은 앞뒤에만 붙였다.</p>
-        </div>
-        <div class="step">
-          <span class="step-label"><span class="n">4</span>매칭 방식</span>
-          <ul>
-            <li>LLM이 대화에서 증상 키워드를 뽑는다</li>
-            <li>키워드를 질병코드로 바꾼다</li>
-            <li>질병코드로 보험금 사례를 찾고 가중치 점수를 매겨 후보를 추린다</li>
-            <li>상위 후보 중 실제 상황에 맞는 사례를 LLM이 마지막으로 고른다</li>
-          </ul>
-          <p>중간 단계가 결정적이라 같은 증상이면 같은 후보가 나온다. 결과가 이상하면 어느 단계에서 틀렸는지 바로 보인다.</p>
-        </div>
-        <div class="step">
-          <span class="step-label"><span class="n">5</span>결과</span>
-          <p>증상 상담, 홈케어, 보험 사례가 한 채팅으로 이어지는 상담을 DB손해보험 제휴 서비스로 약 한 달 만에 개발하고 연동까지 끝냈다.</p>
         </div>
       </div>
     </details>
@@ -864,7 +864,7 @@
       <a href="mailto:chabyul@gmail.com">Email</a>
       <a href="https://github.com/Ko-Dean" target="_blank" rel="noopener">GitHub</a>
     </div>
-    <div>고동욱 · KO DONGUK · AI Builder</div>
+    <div>고동욱 · KO DONGUK · AI Builder · AI Engineer</div>
     <div style="margin-top:6px">© 2026 · Built for GitHub Pages</div>
   </div>
 </footer>
