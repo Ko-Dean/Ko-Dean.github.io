@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>고동욱 | Developer Portfolio</title>
-<meta name="description" content="고동욱 KO DONGUK — iOS · 풀스택 · AI 개발자 포트폴리오">
+<title>고동욱 | AI Builder</title>
+<meta name="description" content="고동욱 KO DONGUK · AI Builder, 풀스택, iOS 포트폴리오">
 <meta name="robots" content="noindex, nofollow, noarchive">
 <style>
   :root{
@@ -171,6 +171,10 @@
 
   .reveal{opacity:0;transform:translateY(20px);transition:opacity .6s ease,transform .6s ease}
   .reveal.show{opacity:1;transform:none}
+  .shots{display:flex;gap:12px;overflow-x:auto;padding:4px 2px 14px;margin-bottom:8px;scroll-snap-type:x mandatory}
+  .shots figure{margin:0;flex:0 0 auto;scroll-snap-align:start}
+  .shots img{display:block;width:180px;height:auto;border-radius:14px;border:1px solid rgba(127,127,127,.25)}
+  .shots figcaption{font-size:.75rem;color:var(--faint);margin-top:6px;max-width:180px}
 </style>
 </head>
 <body>
@@ -179,7 +183,8 @@
   <div class="wrap">
     <div class="logo">KO <span class="grad-text">DONGUK</span></div>
     <div class="nav-links">
-      <a href="#skills">Skills</a>
+      <a href="#side">Side Projects</a>
+<a href="#skills">Skills</a>
       <a href="#career">Career</a>
       <a href="#highlights">Highlights</a>
       <a href="#projects">Projects</a>
@@ -191,21 +196,116 @@
 
 <header class="hero">
   <div class="wrap">
-    <span class="en">KO DONGUK · DEVELOPER</span>
-    <h1>기술에 <span class="grad-text">종속되지 않는</span><br>풀스택 개발자</h1>
-    <p class="role">iOS · 웹 풀스택 · AI 서비스 개발 · Product Owner</p>
+    <span class="en">KO DONGUK · AI BUILDER</span>
+    <h1>AI로 만들고, <span class="grad-text">출시하고,</span><br>운영까지 합니다</h1>
+    <p class="role">AI Builder · 풀스택 · iOS</p>
     <p class="intro">
-      AI·LLM을 제품에 직접 녹여 만드는 풀스택 개발자입니다. iOS 네이티브부터 Next.js·FastAPI·Django 기반
-      웹·백엔드까지 폭넓게 다루며, 최근에는 LLM 기반 반려동물 헬스케어·AI 상담 서비스를 설계·개발하고 있습니다.
-      Codex·Claude Code 같은 AI 코딩 도구를 워크플로우에 적극 활용해, 기획부터 출시·운영까지 빠르게 실증하고
-      제품으로 완성하는 것을 지향합니다.
+      2015년부터 iOS, 웹, 백엔드를 만들어 왔습니다. 요즘은 Claude Code, Codex와 같이 일합니다.
+      올해는 혼자 앱 두 개(ifyou, Fitme)를 기획부터 스토어 출시, 운영까지 했고,
+      회사에서는 보험사와 같이 LLM 건강상담 서비스를 만들었습니다.
+      AI는 필요한 데만 씁니다. 데이터가 10만 건도 안 되는데 벡터 DB를 붙이지는 않습니다.
     </p>
     <div class="hero-cta">
-      <a class="btn primary" href="#projects">프로젝트 보기</a>
+      <a class="btn primary" href="#side">만든 것 보기</a>
       <a class="btn ghost" href="mailto:chabyul@gmail.com">연락하기</a>
     </div>
   </div>
 </header>
+
+<!-- SIDE PROJECTS -->
+<section id="side">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="sec-kicker">Side Projects</div>
+      <div class="sec-title">혼자 만들어서 출시한 것들</div>
+      <p class="cs-note">기획, 디자인, 앱·웹·서버, 배포, 운영까지 직접 했다. 코드는 Claude Code·Codex와 같이 짰다.</p>
+    </div>
+
+    <details class="cs reveal" open>
+      <summary>
+        <div class="cs-head">
+          <h3>ifyou: 익명 고민 투표 앱</h3>
+          <div class="cs-sub">2026.10 ~ · <a href="https://ifyou.to" target="_blank" rel="noopener">ifyou.to</a> · App Store · Google Play</div>
+          <div class="cs-stack"><span class="chip">Expo / React Native</span><span class="chip">Next.js</span><span class="chip">Hono</span><span class="chip">Cloudflare D1·R2</span><span class="chip">OpenAI API</span></div>
+        </div>
+      </summary>
+      <div class="cs-body">
+        <div class="shots"><figure><img src="img/ifyou-1.jpg" alt="개표 결과" loading="lazy"><figcaption>개표 결과</figcaption></figure><figure><img src="img/ifyou-2.jpg" alt="AI 판정" loading="lazy"><figcaption>AI 판정</figcaption></figure><figure><img src="img/ifyou-3.jpg" alt="그래서? 결말 기록" loading="lazy"><figcaption>그래서? 결말 기록</figcaption></figure><figure><img src="img/ifyou-4.jpg" alt="신상 정보 자동 가림" loading="lazy"><figcaption>신상 정보 자동 가림</figcaption></figure></div>
+        <div class="step">
+          <span class="step-label"><span class="n">1</span>왜 만들었나</span>
+          <p>익명 커뮤니티를 한번 직접 만들어보고 싶었다. 블라인드는 직장인 커뮤니티라 고민을 올려도 회사부터 따지는 댓글이 달리고, AI한테 물어봐도 결국 다른 사람들은 어떻게 생각하는지가 궁금했다. 그래서 아는 사람한테는 못 꺼내는 고민을 모르는 사람들한테 묻고, 투표로 답을 받는 걸 만들었다. 처음부터 그리고 싶었던 그림은 라디오였다. 남의 고민을 라디오 사연처럼 틀어놓고 듣다가 내 생각대로 한 표 찍는 것. 듣기 기능은 지금 출시된 버전에는 아직 없다. 첫 커밋(10/1)부터 두 스토어 출시(10/14)까지 2주 걸렸다.</p>
+        </div>
+        <div class="step">
+          <span class="step-label"><span class="n">2</span>설계하면서 정한 것</span>
+          <ul>
+            <li>디자인 소재를 한국 투표 용지와 기표 도장으로 잡았다. 흔한 앱 템플릿처럼 안 보이게 하는 건 폰트가 아니라 이 소재다.</li>
+            <li>색은 인주색 하나만 쓴다. 선택지마다 색을 주면 표가 쏠리고, 빨강·파랑은 한국에서 정당 색으로 읽힌다. 개표 막대는 빗금으로 구분했다.</li>
+            <li>내가 찍기 전엔 결과를 안 보여준다. 남의 표를 보고 따라 찍지 않게.</li>
+            <li>AI 판정은 글쓴이가 원할 때만 연다. "AI는 A, 사람들 62%는 B"처럼 나란히 보여준다. 위기 글은 판정하지 않고 상담처로 보낸다.</li>
+          </ul>
+        </div>
+        <div class="step">
+          <span class="step-label"><span class="n">3</span>AI를 붙인 곳</span>
+          <p>올리기 전에 이름·연락처 같은 신상 정보를 ■■로 가리고, 카테고리를 붙이고, 비워둔 선택지를 채운다. 출시 전에 실제 글 223건, 한 줄 105건짜리 평가 세트를 만들어 프롬프트를 돌려보고 나서 붙였다. 프롬프트 주입 방어도 따로 넣었다.</p>
+        </div>
+        <div class="step">
+          <span class="step-label"><span class="n">4</span>구성</span>
+          <ul>
+            <li>pnpm 모노레포: 앱(Expo), 웹(Next.js → Cloudflare Workers), API(Hono), 공용 패키지, 평가 세트</li>
+            <li>처음엔 Supabase로 시작했는데, 출시 직후 사용자가 늘기 전에 Cloudflare D1 + Hono로 서버를 통째로 옮겼다. Postgres 함수 233개, RLS 정책 492곳, 크론 10개를 옮기면서 RPC 이름과 응답 모양은 그대로 둬서 앱 쪽 호출 81곳은 import만 바꿨다.</li>
+            <li>앱 업데이트는 EAS 대신 R2에 직접 올리는 OTA 서버를 만들어 쓴다.</li>
+          </ul>
+        </div>
+        <div class="step">
+          <span class="step-label"><span class="n">5</span>신경 쓴 것</span>
+          <p>만 19세 이상만 가입할 수 있다. VoiceOver로도 투표할 수 있게 사용자 지정 동작을 넣었다.</p>
+        </div>
+      </div>
+    </details>
+
+    <details class="cs reveal" open>
+      <summary>
+        <div class="cs-head">
+          <h3>Fitme: 영양제 추천 사이트 + 식단 앱</h3>
+          <div class="cs-sub">2026.04 ~ · <a href="https://fitme.care" target="_blank" rel="noopener">fitme.care</a> · Google Play · App Store 심사 중</div>
+          <div class="cs-stack"><span class="chip">Next.js</span><span class="chip">Expo / React Native</span><span class="chip">Cloudflare Workers·D1·R2</span><span class="chip">RevenueCat</span><span class="chip">Paddle</span></div>
+        </div>
+      </summary>
+      <div class="cs-body">
+        <div class="shots"><figure><img src="img/fitme-1.jpg" alt="fitme.care 홈" loading="lazy"><figcaption>fitme.care 홈</figcaption></figure><figure><img src="img/fitme-2.jpg" alt="맞춤 함량 찾기 퀴즈" loading="lazy"><figcaption>맞춤 함량 찾기 퀴즈</figcaption></figure><figure><img src="img/fitme-3.jpg" alt="앱 오늘 탭 (일본 스토어용 화면)" loading="lazy"><figcaption>앱 오늘 탭 (일본 스토어용 화면)</figcaption></figure><figure><img src="img/fitme-4.jpg" alt="앱 영양소 잔량 (일본 스토어용 화면)" loading="lazy"><figcaption>앱 영양소 잔량 (일본 스토어용 화면)</figcaption></figure></div>
+        <div class="step">
+          <span class="step-label"><span class="n">1</span>왜 만들었나</span>
+          <p>페츠에서 영양제 어필리에이트를 해봤던 경험을 사람 쪽으로 옮겼다. 처음 목표는 "직구몰이 아니라 추천 허브"였다. 퀴즈로 나한테 맞는 영양제를 고르고, 순위·비교·성분 궁합을 보고 판매처로 넘어가는 구조다. 한국에서 시작했다가 6월에 글로벌 우선으로 방향을 바꿨고, 지금은 7개 국가, 5개 언어로 돈다.</p>
+        </div>
+        <div class="step">
+          <span class="step-label"><span class="n">2</span>앱으로 넓힌 이유</span>
+          <p>사이트만으로는 다시 올 이유가 약했다. 그래서 식사 사진을 찍으면 오늘 권장량까지 뭐가 얼마나 남았는지 보여주는 앱을 만들었다. 국가별 권장량·상한, Apple Health / Health Connect 연동, 영양제 알림, 위젯, 가족 공유를 넣었고 Free / Pro / Family 요금제로 판다.</p>
+        </div>
+        <div class="step">
+          <span class="step-label"><span class="n">3</span>설계하면서 정한 것</span>
+          <ul>
+            <li>건강 데이터는 기기 밖으로 안 보낸다. 백업은 기기에서 만든 키로 암호화(XChaCha20-Poly1305)하고, 가족 공유도 구성원별로 키를 감싸서(X25519) 서버는 내용을 못 본다.</li>
+            <li>사이트는 정적 export + Worker 하나. 정적 파일은 Worker를 안 거치니 무료 플랜으로 버틴다. 대신 배포당 파일 2만 개 제한이 있어서 미리 렌더할 페이지 수를 조절한다.</li>
+            <li>효능 주장이나 "진단" 같은 말은 안 쓴다. 식약처·FDA 기준에 걸리지 않게 문구를 맞췄다.</li>
+          </ul>
+        </div>
+        <div class="step">
+          <span class="step-label"><span class="n">4</span>구성</span>
+          <ul>
+            <li>모노레포: 사이트(Next.js 15)와 앱(Expo)이 영양 계산 코드를 같이 쓴다.</li>
+            <li>Vercel + Supabase로 시작해서 10월에 Cloudflare(Workers, D1, KV, R2)로 전부 옮겼다. 로그인(이메일 OTP, Apple)도 Worker에서 직접 처리한다.</li>
+            <li>앱 결제는 RevenueCat, 웹 결제는 Paddle. 빌드는 GitHub Actions에서 하고, OTA는 서명한 매니페스트를 R2에 올리는 방식으로 직접 만들었다.</li>
+            <li>가격 갱신, 사이트 재빌드, GA4·Search Console 수집, 알림·뉴스레터는 매일 크론으로 돈다.</li>
+          </ul>
+        </div>
+        <div class="step">
+          <span class="step-label"><span class="n">5</span>지금 상태</span>
+          <p>사이트와 안드로이드 앱(1.2)은 출시해서 운영 중이고, iOS는 지금 앱스토어 심사를 기다리고 있다. 만드는 건 빨리 됐는데 트래픽과 전환이 아직 숙제다. 요즘은 SEO와 SNS 쪽을 손보고 있다.</p>
+        </div>
+      </div>
+    </details>
+  </div>
+</section>
 
 <!-- SKILLS -->
 <section id="skills">
@@ -229,7 +329,7 @@
       </div>
       <div class="skill-card reveal">
         <h3><span class="dot"></span>AI / LLM</h3>
-        <div class="chips"><span class="chip">OpenAI API</span><span class="chip">RAG</span><span class="chip">HuggingFace</span><span class="chip">Cursor</span><span class="chip">Codex</span><span class="chip">Claude Code</span></div>
+        <div class="chips"><span class="chip">OpenAI API</span><span class="chip">HuggingFace</span><span class="chip">Cursor</span><span class="chip">Codex</span><span class="chip">Claude Code</span></div>
       </div>
       <div class="skill-card reveal">
         <h3><span class="dot"></span>인증 / 결제 / 메시징</h3>
@@ -262,13 +362,13 @@
       <div class="tl-item reveal">
         <div class="tl-top"><span class="tl-company">벳플럭스</span><span class="tl-period">2026.03 ~ 2026.10 · 8개월</span></div>
         <div class="tl-role">개발자 · 신규 서비스 풀스택 개발 및 기존 서비스 유지보수</div>
-        <div class="tl-meta"><b>스택</b> · AI(Codex, Claude Code) 활용 — Next.js, FastAPI, Django, Node.js</div>
+        <div class="tl-meta"><b>스택</b> · AI(Codex, Claude Code) 활용 · Next.js, FastAPI, Django, Node.js</div>
         <div class="tl-domains"><span class="chip">반려동물</span><span class="chip">LLM</span><span class="chip">CRM</span><span class="chip">CTI</span></div>
       </div>
       <div class="tl-item alt reveal">
         <div class="tl-top"><span class="tl-company">페츠 주식회사</span><span class="tl-period">2022.07 ~ 2025.12 · 3년 5개월</span></div>
         <div class="tl-role">대표 (1인 창업) · 기획 &amp; 개발</div>
-        <div class="tl-meta"><b>스택</b> · AI(Cursor, Codex, Claude Code, Perplexity, HuggingFace) 활용 — Next.js, Vite.js, Express.js</div>
+        <div class="tl-meta"><b>스택</b> · AI(Cursor, Codex, Claude Code, Perplexity, HuggingFace) 활용 · Next.js, Vite.js, Express.js</div>
         <div class="tl-domains"><span class="chip">반려동물</span><span class="chip">어필리에이트</span><span class="chip">영양제</span><span class="chip">검색</span></div>
       </div>
       <div class="tl-item reveal">
@@ -307,7 +407,7 @@
         <ul>
           <li>기획 → 설계 → 개발 → 출시 → 운영까지 End-to-End 책임 수행</li>
           <li>Flutter, React, Nuxt, Node.js, Swift 등 다양한 스택 병행</li>
-          <li>AI · RAG · OpenAI API를 실제 서비스에 접목해 상용화</li>
+          <li>AI · OpenAI API를 실제 서비스에 접목해 상용화</li>
         </ul>
       </div>
       <div class="hl-card reveal">
@@ -350,7 +450,7 @@
         <div class="ico">🧭</div>
         <h3>업무 스타일</h3>
         <ul>
-          <li>선호 도메인 — 헬스케어 / 커머스 / 상담 / 정품인증</li>
+          <li>선호 도메인: 헬스케어 / 커머스 / 상담 / 정품인증</li>
           <li>제품 관점 문제 정의 → 빠른 MVP → 피드백 기반 개선</li>
           <li>iOS / 풀스택 / PO 역할 병행 가능</li>
         </ul>
@@ -385,10 +485,10 @@
         <div class="proj-title">🐾 DB손해보험 펫블리 AI건강상담</div>
         <div class="proj-period">2026.05 ~ 2026.06 · 제휴</div>
         <div class="proj-desc">LLM 기반 채팅으로 반려동물의 현재 증상을 수의학적으로 추론해 홈케어 가이드를 제공하고, 유사 사례의 보험금 수령 사례를 보여주는 AI 건강상담.</div>
-        <div class="stack"><span class="chip">Next.js</span><span class="chip">FastAPI</span><span class="chip">LLM</span><span class="chip">RAG</span></div>
+        <div class="stack"><span class="chip">Next.js</span><span class="chip">FastAPI</span><span class="chip">LLM</span></div>
       </div>
       <div class="proj reveal">
-        <div class="proj-title">📞 늘펫 — CTI 연동 · 통화 시스템</div>
+        <div class="proj-title">📞 늘펫: CTI 연동 · 통화 시스템</div>
         <div class="proj-period">2026.05 ~ 2026.10 · 유지보수 &amp; 신규</div>
         <div class="proj-desc">기존 050 안심번호 서비스를 회사 내부 쿠버네티스 환경으로 이관·운영하고, 외주사가 개발한 CTI를 자사 서비스와 연동·커스텀화. 세종텔레콤 050 서비스를 통합하고, KT·LG U+ 등과 연동해 녹취·통화 요약 기능을 신규 개발.</div>
         <div class="stack"><span class="chip">CTI</span><span class="chip">050 안심번호</span><span class="chip">세종텔레콤</span><span class="chip">Kubernetes</span><span class="chip">KT</span><span class="chip">LG U+</span><span class="chip">통화 요약</span></div>
@@ -521,7 +621,7 @@
     <details class="cs reveal" open>
       <summary>
         <div class="cs-head">
-          <h3>늘펫케어 — LLM 기반 반려동물 건강검진 추천 &amp; 병원 연결</h3>
+          <h3>늘펫케어: LLM 기반 반려동물 건강검진 추천 &amp; 병원 연결</h3>
           <div class="cs-sub">2026 · 벳플럭스 · LLM 기반 신규 서비스 개발</div>
           <div class="cs-stack"><span class="chip">Next.js</span><span class="chip">Django</span><span class="chip">LLM</span></div>
         </div>
@@ -571,47 +671,37 @@
     <details class="cs reveal" open>
       <summary>
         <div class="cs-head">
-          <h3>DB손해보험 펫블리 AI건강상담 — 증상 추론 &amp; 보험금 사례 안내</h3>
+          <h3>DB손해보험 펫블리 AI 건강상담: 증상 추론과 보험금 사례 매칭</h3>
           <div class="cs-sub">2026.05 ~ 2026.06 · 벳플럭스 · DB손해보험 제휴</div>
-          <div class="cs-stack"><span class="chip">Next.js</span><span class="chip">FastAPI</span><span class="chip">LLM</span><span class="chip">RAG</span></div>
+          <div class="cs-stack"><span class="chip">Next.js</span><span class="chip">FastAPI</span><span class="chip">LLM</span></div>
         </div>
       </summary>
       <div class="cs-body">
         <div class="step">
           <span class="step-label"><span class="n">1</span>문제</span>
-          <p>반려동물이 아플 때 보호자는 증상이 얼마나 심각한지, 집에서 어떻게 대처해야 할지, 보험 처리가 가능한지 막막하다. 증상 상담과 보험 정보가 분리돼 있어 한 번에 판단하기 어려웠다.</p>
+          <p>강아지가 아프면 보호자가 궁금한 건 세 가지다. 병원에 당장 가야 하나, 집에서 뭘 해주면 되나, 보험 처리는 되나. 지금까지는 이걸 각각 다른 곳에서 찾아봐야 했다.</p>
         </div>
         <div class="step">
           <span class="step-label"><span class="n">2</span>접근</span>
-          <ul>
-            <li>채팅으로 현재 증상을 입력받아 LLM이 수의학적으로 추론하도록 설계</li>
-            <li>추론 결과에 맞춰 집에서 할 수 있는 홈케어 가이드를 제공</li>
-            <li>유사 사례의 보험금 수령 사례를 함께 보여줘 보험 활용까지 연결</li>
-          </ul>
+          <p>채팅 하나에서 증상을 듣고, 홈케어 가이드를 주고, 비슷한 증상으로 실제 보험금을 받은 사례까지 보여주기로 했다. 증상 추론은 LLM이 맡되 수의학 근거 범위를 벗어난 말은 못 하게 프롬프트와 출력 형식을 묶었다.</p>
         </div>
         <div class="step">
-          <span class="step-label"><span class="n">3</span>어려웠던 점</span>
-          <ul>
-            <li>증상 추론은 의료성 정보라 환각·과잉 진단을 막는 것이 핵심</li>
-            <li>증상과 유사한 보험금 사례를 정확히 매칭해야 신뢰가 생김</li>
-            <li>제휴(DB손해보험) 데이터·요건을 서비스 흐름에 맞게 녹여야 함</li>
-          </ul>
+          <span class="step-label"><span class="n">3</span>RAG를 안 쓴 이유</span>
+          <p>고객사 요청은 RAG였다. 그런데 보험금 사례 데이터가 10만 건이 안 됐다. 이 규모면 임베딩하고 벡터 DB를 붙이는 것보다 직접 매칭하는 쪽이 빠르고 싸다. 무엇보다 "왜 이 사례가 나왔는지"를 설명할 수 있어야 보험사도 보호자도 믿는다고 봤다. 그래서 검색은 알고리즘으로 짜고 LLM은 앞뒤에만 붙였다.</p>
         </div>
         <div class="step">
-          <span class="step-label"><span class="n">4</span>해결</span>
+          <span class="step-label"><span class="n">4</span>매칭 방식</span>
           <ul>
-            <li>수의학적 근거 범위 안에서 추론하도록 LLM을 제약해 환각을 억제</li>
-            <li>증상 기반으로 유사 보험금 수령 사례를 검색·매칭(RAG)해 함께 제시</li>
-            <li>홈케어 가이드 → 보험 사례로 이어지는 상담 흐름을 하나의 채팅에 통합</li>
+            <li>LLM이 대화에서 증상 키워드를 뽑는다</li>
+            <li>키워드를 질병코드로 바꾼다</li>
+            <li>질병코드로 보험금 사례를 찾고 가중치 점수를 매겨 후보를 추린다</li>
+            <li>상위 후보 중 실제 상황에 맞는 사례를 LLM이 마지막으로 고른다</li>
           </ul>
+          <p>중간 단계가 결정적이라 같은 증상이면 같은 후보가 나온다. 결과가 이상하면 어느 단계에서 틀렸는지 바로 보인다.</p>
         </div>
         <div class="step">
           <span class="step-label"><span class="n">5</span>결과</span>
-          <ul>
-            <li>증상 상담·홈케어·보험 사례를 한 채팅에서 제공하는 AI 건강상담을 구축</li>
-            <li>DB손해보험 제휴 서비스로 약 한 달 내 개발·연동을 완료</li>
-            <li>반려동물 증상 추론과 보험 데이터를 결합한 차별화된 상담 경험을 구현</li>
-          </ul>
+          <p>증상 상담, 홈케어, 보험 사례가 한 채팅으로 이어지는 상담을 DB손해보험 제휴 서비스로 약 한 달 만에 개발하고 연동까지 끝냈다.</p>
         </div>
       </div>
     </details>
@@ -620,7 +710,7 @@
     <details class="cs reveal" open>
       <summary>
         <div class="cs-head">
-          <h3>IAM 화상상담 — 영양제 소분 서비스 비대면 상담 플랫폼</h3>
+          <h3>IAM 화상상담: 영양제 소분 서비스 비대면 상담 플랫폼</h3>
           <div class="cs-sub">2020.03 ~ 2021.09 · 풀스택 &amp; Product Owner · iOS · 웹 · 백엔드 전 영역 단독 개발</div>
           <div class="cs-stack"><span class="chip">Swift</span><span class="chip">Node.js</span><span class="chip">Nuxt</span><span class="chip">Agora WebRTC</span><span class="chip">Firestore</span></div>
         </div>
@@ -650,7 +740,7 @@
           <span class="step-label"><span class="n">4</span>해결</span>
           <ul>
             <li>WebRTC는 Agora를 활용해 직접 구현 부담을 줄이고 영상 연결 안정성을 확보</li>
-            <li>실시간 상태 동기화는 소켓 대신 Firestore를 선택 — 안정적인 리스너로 상태 변경을 자동 반영하고 연결 관리·유지보수 부담을 크게 낮춤</li>
+            <li>실시간 상태 동기화는 소켓 대신 Firestore 리스너로 했다. 연결 끊김을 직접 관리할 일이 없어져서 유지보수가 훨씬 편해졌다</li>
             <li>iOS·웹·백엔드가 동일한 Firestore 상태를 구독하는 구조로 통일해 화면 불일치를 방지</li>
           </ul>
         </div>
@@ -669,7 +759,7 @@
     <details class="cs reveal" open>
       <summary>
         <div class="cs-head">
-          <h3>늘펫 CTI 연동 — 050 안심번호 서비스의 통화 인프라 고도화</h3>
+          <h3>늘펫 CTI 연동: 050 안심번호 통화에 녹취·요약 붙이기</h3>
           <div class="cs-sub">2026.05 ~ 2026.10 · 벳플럭스 · 유지보수 &amp; 신규 개발</div>
           <div class="cs-stack"><span class="chip">CTI</span><span class="chip">050 안심번호</span><span class="chip">세종텔레콤</span><span class="chip">Kubernetes</span><span class="chip">KT</span><span class="chip">LG U+</span><span class="chip">통화 요약</span></div>
         </div>
@@ -707,7 +797,7 @@
         <div class="step">
           <span class="step-label"><span class="n">5</span>결과</span>
           <ul>
-            <li>단순 안심번호 통화에서 녹취·통화 요약까지 제공하는 상담 인프라로 고도화</li>
+            <li>안심번호로 전화만 이어주던 걸, 녹취와 통화 요약까지 남는 상담 시스템으로 바꿨다</li>
             <li>통화 데이터를 자산화해 상담 품질 관리·효율화의 기반을 마련</li>
             <li>외주 CTI·통신사 연동·LLM 요약을 아우르는 통합 통화 시스템을 구축</li>
           </ul>
@@ -719,7 +809,7 @@
     <details class="cs reveal" open>
       <summary>
         <div class="cs-head">
-          <h3>병원 모바일 시스템 — 비콘·NFC·결제 기반 진료 편의</h3>
+          <h3>병원 모바일 시스템: 비콘·NFC·결제 기반 진료 편의</h3>
           <div class="cs-sub">2015 ~ 2017 · 공간소프트 · iOS &amp; 백엔드 · 선병원·차병원·포항성모병원 등</div>
           <div class="cs-stack"><span class="chip">Objective-C</span><span class="chip">PHP</span><span class="chip">Java(JSP)</span><span class="chip">Beacon</span><span class="chip">NFC</span><span class="chip">NicePay</span></div>
         </div>
@@ -774,7 +864,7 @@
       <a href="mailto:chabyul@gmail.com">Email</a>
       <a href="https://github.com/Ko-Dean" target="_blank" rel="noopener">GitHub</a>
     </div>
-    <div>고동욱 · KO DONGUK — Developer</div>
+    <div>고동욱 · KO DONGUK · AI Builder</div>
     <div style="margin-top:6px">© 2026 · Built for GitHub Pages</div>
   </div>
 </footer>
