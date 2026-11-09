@@ -217,8 +217,8 @@
   <div class="wrap">
     <div class="sec-head reveal">
       <div class="sec-kicker">Side Projects</div>
-      <div class="sec-title">혼자 만들어서 출시한 것들</div>
-      <p class="cs-note">기획, 디자인, 앱·웹·서버, 배포, 운영까지 직접 했다. 코드는 Claude Code·Codex와 같이 짰다.</p>
+      <div class="sec-title">혼자 만들어 출시한 서비스</div>
+      <p class="cs-note">기획, 디자인, 개발, 배포, 운영을 혼자 했습니다. 코드는 Claude Code와 Codex를 같이 썼습니다.</p>
     </div>
 
     <details class="cs reveal" open>
@@ -233,33 +233,24 @@
         <div class="shots"><figure><img src="img/ifyou-1.jpg" alt="개표 결과" loading="lazy"><figcaption>개표 결과</figcaption></figure><figure><img src="img/ifyou-2.jpg" alt="AI 판정" loading="lazy"><figcaption>AI 판정</figcaption></figure><figure><img src="img/ifyou-3.jpg" alt="그래서? 결말 기록" loading="lazy"><figcaption>그래서? 결말 기록</figcaption></figure><figure><img src="img/ifyou-4.jpg" alt="신상 정보 자동 가림" loading="lazy"><figcaption>신상 정보 자동 가림</figcaption></figure></div>
         <div class="step">
           <span class="step-label"><span class="n">1</span>왜 만들었나</span>
-          <p>익명 커뮤니티를 한번 직접 만들어보고 싶었다. 블라인드는 직장인 커뮤니티라 고민을 올려도 회사부터 따지는 댓글이 달리고, AI한테 물어봐도 결국 다른 사람들은 어떻게 생각하는지가 궁금했다. 그래서 아는 사람한테는 못 꺼내는 고민을 모르는 사람들한테 묻고, 투표로 답을 받는 걸 만들었다. 처음부터 그리고 싶었던 그림은 라디오였다. 남의 고민을 라디오 사연처럼 틀어놓고 듣다가 내 생각대로 한 표 찍는 것. 듣기 기능은 지금 출시된 버전에는 아직 없다. 첫 커밋(10/1)부터 두 스토어 출시(10/14)까지 2주 걸렸다.</p>
+          <p>익명 커뮤니티를 한번 만들어 보고 싶었습니다. 블라인드에 고민을 올리면 고민보다 회사 얘기가 먼저 나오고, AI에게 물어봐도 결국 다른 사람들 생각이 궁금했습니다. 그래서 아는 사람에게 말하기 어려운 고민을 익명으로 올리고, 투표로 의견을 받는 앱을 만들었습니다.</p><p>처음 생각은 라디오처럼 남의 고민을 들으면서 투표하는 것이었는데, 듣기 기능은 아직 넣지 못했습니다. 첫 커밋부터 양쪽 스토어 출시까지 2주 걸렸습니다.</p>
         </div>
         <div class="step">
-          <span class="step-label"><span class="n">2</span>설계하면서 정한 것</span>
+          <span class="step-label"><span class="n">2</span>설계</span>
           <ul>
-            <li>디자인 소재를 한국 투표 용지와 기표 도장으로 잡았다. 흔한 앱 템플릿처럼 안 보이게 하는 건 폰트가 아니라 이 소재다.</li>
-            <li>색은 인주색 하나만 쓴다. 선택지마다 색을 주면 표가 쏠리고, 빨강·파랑은 한국에서 정당 색으로 읽힌다. 개표 막대는 빗금으로 구분했다.</li>
-            <li>내가 찍기 전엔 결과를 안 보여준다. 남의 표를 보고 따라 찍지 않게.</li>
-            <li>AI 판정은 글쓴이가 원할 때만 연다. "AI는 A, 사람들 62%는 B"처럼 나란히 보여준다. 위기 글은 판정하지 않고 상담처로 보낸다.</li>
+            <li>투표 용지와 기표 도장을 디자인 소재로 썼습니다.</li>
+            <li>선택지에 색을 쓰지 않았습니다. 색 때문에 표가 쏠릴 수 있고, 빨강·파랑은 정당 색처럼 보이기 때문입니다.</li>
+            <li>내가 투표하기 전에는 결과를 보여주지 않습니다.</li>
+            <li>AI 판정은 글쓴이가 원할 때만 보이고, 위기 글은 판정 대신 상담 기관을 안내합니다.</li>
           </ul>
         </div>
         <div class="step">
-          <span class="step-label"><span class="n">3</span>AI를 붙인 곳</span>
-          <p>올리기 전에 이름·연락처 같은 신상 정보를 ■■로 가리고, 카테고리를 붙이고, 비워둔 선택지를 채운다. 출시 전에 실제 글 223건, 한 줄 105건짜리 평가 세트를 만들어 프롬프트를 돌려보고 나서 붙였다. 프롬프트 주입 방어도 따로 넣었다.</p>
-          <p>출시 전에 평가를 세 번 돌리면서 프롬프트를 고쳤다. 글 211 → 220/223, 위기 글 재현율 0.94 → 0.98, 한 줄 99 → 105/105. 신상 노출 0건, 주입 테스트 16/16 통과. 평균 응답은 글 3.1초, 한 줄 1.7초, 평가 세트 한 바퀴에 8센트 정도.</p>
+          <span class="step-label"><span class="n">3</span>AI 기능</span>
+          <p>글을 올리면 AI가 이름·연락처 같은 개인정보를 가리고, 카테고리를 붙이고, 비어 있는 선택지를 채웁니다.</p><p>출시 전에 글 223건, 한 줄 105건으로 평가 세트를 만들고 세 번 돌려 보면서 프롬프트를 고쳤습니다. 마지막 회차에서 글 220/223건, 한 줄 105/105건을 통과했고, 위기 글을 잡아내는 비율(재현율)은 0.94에서 0.98로 올랐습니다. 개인정보가 노출된 경우는 0건이었습니다.</p>
         </div>
         <div class="step">
           <span class="step-label"><span class="n">4</span>구성</span>
-          <ul>
-            <li>pnpm 모노레포: 앱(Expo), 웹(Next.js → Cloudflare Workers), API(Hono), 공용 패키지, 평가 세트</li>
-            <li>처음엔 Supabase로 시작했는데, 출시 직후 사용자가 늘기 전에 Cloudflare D1 + Hono로 서버를 통째로 옮겼다. Postgres 함수 233개, RLS 정책 492곳, 크론 10개를 옮기면서 RPC 이름과 응답 모양은 그대로 둬서 앱 쪽 호출 81곳은 import만 바꿨다.</li>
-            <li>앱 업데이트는 EAS 대신 R2에 직접 올리는 OTA 서버를 만들어 쓴다.</li>
-          </ul>
-        </div>
-        <div class="step">
-          <span class="step-label"><span class="n">5</span>신경 쓴 것</span>
-          <p>만 19세 이상만 가입할 수 있다. VoiceOver로도 투표할 수 있게 사용자 지정 동작을 넣었다.</p>
+          <p>Expo 앱, Next.js 웹, Hono API를 pnpm 모노레포로 묶었습니다. Supabase로 시작했다가 출시 직후 Cloudflare D1로 서버를 옮겼는데, API 이름과 응답 형식을 그대로 둬서 앱 코드는 거의 고치지 않았습니다. 앱 업데이트는 R2에 올리는 OTA를 직접 만들어 쓰고 있습니다.</p>
         </div>
       </div>
     </details>
@@ -276,69 +267,41 @@
         <div class="shots"><figure><img src="img/fitme-1.jpg" alt="먹은 칼로리·쓴 칼로리" loading="lazy"><figcaption>먹은 칼로리·쓴 칼로리</figcaption></figure><figure><img src="img/fitme-2.jpg" alt="사진 한 장으로 식단 기록" loading="lazy"><figcaption>사진 한 장으로 식단 기록</figcaption></figure><figure><img src="img/fitme-3.jpg" alt="영양소 7가지 하루 기준" loading="lazy"><figcaption>영양소 7가지 하루 기준</figcaption></figure><figure><img src="img/fitme-4.jpg" alt="3문항으로 영양제 플랜" loading="lazy"><figcaption>3문항으로 영양제 플랜</figcaption></figure></div>
         <div class="step">
           <span class="step-label"><span class="n">1</span>왜 만들었나</span>
-          <p>페츠에서 영양제 어필리에이트를 해봤던 경험을 사람 쪽으로 옮겼다. 처음 목표는 "직구몰이 아니라 추천 허브"였다. 퀴즈로 나한테 맞는 영양제를 고르고, 순위·비교·성분 궁합을 보고 판매처로 넘어가는 구조다. 한국에서 시작했다가 6월에 글로벌 우선으로 방향을 바꿨고, 지금은 7개 국가, 5개 언어로 돈다.</p>
+          <p>창업했을 때부터 영양제 어필리에이트에 관심이 많아서 추천 사이트를 하나 만들어 뒀는데, 한동안 손을 놓고 있었습니다. 퇴사한 뒤 방향을 바꿔 직접 운영해 보고 싶어졌고, 그래서 앱까지 만들게 됐습니다. 사이트는 퀴즈로 나에게 맞는 영양제를 찾고, 순위와 비교를 본 뒤 판매처로 넘어가는 구조입니다. 지금은 7개 나라, 5개 언어로 운영하고 있습니다.</p>
         </div>
         <div class="step">
-          <span class="step-label"><span class="n">2</span>앱으로 만든 이유: 먹고, 채우고, 다시 사는 순환</span>
-          <p>칼로리 세는 앱은 이미 많다. 그런데 칼로리만 보면 정작 영양소가 안 보인다. 비타민 D, 철, 마그네슘 같은 건 밥으로도 꽤 채워지는데, 그걸 모르고 영양제를 또 먹어서 상한을 넘기는 경우가 많다. 그래서 음식이 먼저고 영양제는 모자란 만큼만 채우는 쪽으로 설계했다.</p>
-          <ul>
-            <li><b>먹는다</b>: 식사 사진을 찍으면 음식으로 들어온 칼로리와 영양소 7가지가 잡힌다.</li>
-            <li><b>본다</b>: 나라별 권장량·상한 기준으로 오늘 뭐가 모자라고 뭐가 이미 넘쳤는지 보여준다.</li>
-            <li><b>채운다</b>: 영양제는 모자란 만큼만. 질문 3개로 플랜을 잡고, 상한을 넘기면 경고한다.</li>
-            <li><b>관리한다</b>: 복용 체크를 하면 남은 개수와 유통기한이 같이 줄어들고, 떨어질 때쯤 알림이 온다.</li>
-            <li><b>다시 산다</b>: 다시 살 때는 사이트에서 내 기준에 맞는 제품을 비교해서 고른다. 그리고 다시 먹는 기록으로 돌아간다.</li>
-          </ul>
-          <p>사이트는 고르는 곳, 앱은 기록하는 곳이다. 둘이 이 순환으로 이어진다. Apple Health / Health Connect 연동, 위젯, 가족 공유를 넣었고 Free / Pro / Family 요금제로 판다.</p>
+          <span class="step-label"><span class="n">2</span>앱으로 만든 이유</span>
+          <p>칼로리를 세는 앱은 많은데 영양소를 보여주는 앱은 드뭅니다. 비타민 D나 철, 마그네슘은 음식으로도 꽤 들어오는데, 그걸 모른 채 영양제를 더 먹으면 상한을 넘기기 쉽습니다.</p><p>그래서 음식으로 먼저 채우고, 부족한 만큼만 영양제로 채우고, 다 떨어지면 다시 사는 흐름이 한 바퀴 돌도록 설계했습니다. 사이트는 고르는 곳, 앱은 기록하는 곳으로 역할을 나눴습니다.</p>
         </div>
         <div class="step">
-          <span class="step-label"><span class="n">3</span>데이터는 어떻게 모았나</span>
+          <span class="step-label"><span class="n">3</span>앱의 흐름</span>
           <ul>
-            <li>iHerb 나라별 카테고리 목록에서 가격, 평점, 리뷰 수를 가져온다. 매일 새벽 한 나라씩 돈다(월 미국, 화 한국, 수 태국 …). 상품은 이름이 아니라 상품 ID로 맞추고, 가격은 바뀔 때만 이력으로 남긴다.</li>
-            <li>성분표(1회 섭취량당 함량)는 미국 NIH 영양제 라벨 DB(DSLD, 라벨 21만 4천 건)와 Vitacost에서 바코드(UPC)로만 붙인다. 이름이 비슷하다고 붙이면 다른 제품 성분이 들어갈 수 있어서 이름 매칭은 일부러 안 했다.</li>
-            <li>단위는 IU, mcg, mg, g, CFU로 맞추고 1회 섭취량 기준 숫자를 우선 쓴다. 비타민 D가 mg로 잘못 들어온 건 IU나 %DV로 증명될 때만 고친다.</li>
-            <li>2026-11-09 기준 DB 집계:
-              <ul>
-                <li>영양제 28,674개(대분류 15개, 세부 분류 50개). 평점이 붙은 건 24,668개(86%), 성분 정보가 붙은 건 22,998개(80%).</li>
-                <li>나라별 가격 행 188,789개(11개 시장). 사이트에 여는 건 그중 7개 나라다.</li>
-                <li>가격 이력 201,390건, 상품 27,327개(2026-04-03부터 쌓임).</li>
-                <li>검색에 열어 둔 상품 상세 페이지 12,921개. 나라별 섭취기준 값 1,324개.</li>
-              </ul>
-            </li>
+            <li>식사 사진을 찍으면 칼로리와 영양소 7가지가 기록됩니다.</li>
+            <li>나라별 권장량과 상한 기준으로 부족한 것과 넘친 것을 보여줍니다.</li>
+            <li>질문 3개로 영양제 플랜을 만들고, 상한을 넘으면 알려줍니다.</li>
+            <li>복용을 체크하면 남은 개수와 유통기한이 관리되고, 떨어질 때쯤 알림이 옵니다.</li>
+            <li>다시 살 때는 사이트에서 비교하고 구매합니다.</li>
           </ul>
         </div>
         <div class="step">
-          <span class="step-label"><span class="n">4</span>무엇을 근거로 추천하나</span>
-          <ul>
-            <li>카테고리 순위는 0~100점 인기 점수다. 수요(판매처 순위) 35%, 신뢰(평점·리뷰 수) 35%, 최신성 10%, 가격 10%, 재고 10%. 리뷰 수는 로그로 눌러서 리뷰 많은 제품이 무조건 이기지 않게 했고, 모르는 값은 빼고 나머지 비율로 다시 계산한다. 품절이면 재고 점수가 0이다.</li>
-            <li>퀴즈는 6단계(목표, 성별, 체형, 나이, 식단, 생활 습관)다. 답마다 카테고리 점수를 더한다. 비건이면 철 +22, 햇빛을 잘 못 보면 비타민 D +22 같은 식이다. 상위 5개 카테고리에서 인기 점수 1위를 고르고, 맞춤 점수 55%와 인기 점수 45%를 섞어 최종 순서를 정한다.</li>
-            <li>결과 화면엔 그 나라 섭취기준의 권장량과 상한을 같이 띄운다. 성분 궁합 6쌍과 "○○에 좋은" 조합 24개는 직접 골랐고, 효능을 주장하는 문장은 쓰지 않는다.</li>
-          </ul>
+          <span class="step-label"><span class="n">4</span>데이터 수집</span>
+          <p>가격, 평점, 리뷰 수는 iHerb의 나라별 목록에서 매일 한 나라씩 갱신합니다. 성분표는 미국 NIH 영양제 라벨 DB와 Vitacost에서 바코드가 정확히 일치하는 것만 붙였습니다. 이름으로 맞추면 다른 제품의 성분이 섞일 수 있어서입니다.</p><p>11월 9일 기준으로 영양제 28,674개가 있고, 그중 86%에 평점, 80%에 성분 정보가 있습니다. 가격 변동 이력은 4월부터 약 20만 건 쌓였습니다.</p>
         </div>
         <div class="step">
-          <span class="step-label"><span class="n">5</span>설계하면서 정한 것</span>
-          <ul>
-            <li>"모자란 만큼만"을 말하려면 기준 숫자가 정확해야 한다. 한국(KDRI 2025), 미국·캐나다(NASEM), 일본, 대만, 태국, 베트남, 호주·뉴질랜드 공식 섭취기준 7종을 원문에서 직접 옮기고 따로 검증했다(미국·호주 쪽만 1,434건 대조, 불일치 0). 비타민 D, B12, C, 칼슘, 철, 아연, 마그네슘, 엽산 8가지에 권장량과 상한을 같이 넣었고, 사이트와 앱이 같은 파일을 읽는다.</li>
-            <li>건강 데이터는 기기 밖으로 안 보낸다. 백업은 기기에서 만든 키로 암호화(XChaCha20-Poly1305)하고, 가족 공유도 구성원별로 키를 감싸서(X25519) 서버는 내용을 못 본다.</li>
-            <li>사이트는 정적 export + Worker 하나. 정적 파일은 Worker를 안 거치니 무료 플랜으로 버틴다. 대신 배포당 파일 2만 개 제한이 있어서 미리 렌더할 페이지 수를 조절한다.</li>
-            <li>효능 주장이나 "진단" 같은 말은 안 쓴다. 식약처·FDA 기준에 걸리지 않게 문구를 맞췄다.</li>
-          </ul>
-          <p>식사 사진 분석은 모델이 JSON으로만 답하게 하고, 영양소마다 상한을 걸고, 합계는 모델 말 대신 코드에서 다시 계산한다. 11월엔 OpenAI 크레딧이 바닥나서 스캔이 전부 실패한 적이 있다. 그날 Claude Haiku로 옮겼고, 테스트 사진 14장을 다 읽는 걸 확인하고 내보냈다. 실서비스 기준 식사 사진 9.5초, 라벨 1.9초, 장당 약 0.1센트.</p>
+          <span class="step-label"><span class="n">5</span>추천 기준</span>
+          <p>카테고리 순위는 판매처 순위와 평점·리뷰 수를 가장 크게(각 35%) 보고, 최신성·가격·재고를 더해 점수를 매깁니다. 퀴즈는 목표, 성별, 체형, 나이, 식단, 생활 습관 6가지 답에 따라 카테고리 점수를 올리고(예: 비건이면 철), 상위 카테고리에서 점수가 높은 제품을 고릅니다.</p><p>권장량과 상한은 한국, 미국·캐나다, 일본, 대만, 태국, 베트남, 호주·뉴질랜드의 공식 섭취기준을 원문에서 직접 옮기고 다시 대조해 확인했습니다.</p>
         </div>
         <div class="step">
-          <span class="step-label"><span class="n">6</span>구성</span>
-          <ul>
-            <li>모노레포: 사이트(Next.js 15)와 앱(Expo)이 영양 계산 코드를 같이 쓴다.</li>
-            <li>Vercel + Supabase로 시작해서 10월에 Cloudflare(Workers, D1, KV, R2)로 전부 옮겼다. 로그인(이메일 OTP, Apple)도 Worker에서 직접 처리한다.</li>
-            <li>앱 결제는 RevenueCat, 웹 결제는 Paddle. 빌드는 GitHub Actions에서 하고, OTA는 서명한 매니페스트를 R2에 올리는 방식으로 직접 만들었다.</li>
-            <li>가격 갱신, 사이트 재빌드, GA4·Search Console 수집, 알림·뉴스레터는 매일 크론으로 돈다.</li>
-          </ul>
+          <span class="step-label"><span class="n">6</span>AI 기능</span>
+          <p>식사 사진 분석 결과는 정해진 JSON 형식으로만 받고, 합계는 모델 답 대신 코드에서 다시 계산합니다. 11월에 OpenAI 크레딧이 떨어져 스캔이 모두 멈춘 적이 있어서, 그날 Claude Haiku로 바꿨습니다. 지금은 사진 한 장 분석에 9.5초 정도 걸립니다.</p>
         </div>
         <div class="step">
-          <span class="step-label"><span class="n">7</span>지금 상태</span>
-          <p>사이트와 안드로이드 앱(1.2)은 출시해서 운영 중이고, iOS는 지금 앱스토어 심사를 기다리고 있다. 만드는 건 빨리 됐는데 트래픽과 전환이 아직 숙제다. 요즘은 SEO와 SNS 쪽을 손보고 있다.</p>
+          <span class="step-label"><span class="n">7</span>구성과 현재</span>
+          <p>Next.js 사이트와 Expo 앱이 영양 계산 코드를 같이 씁니다. Vercel과 Supabase에서 시작해 10월에 Cloudflare로 옮겼고, 결제는 RevenueCat과 Paddle을 씁니다. 가격 갱신과 사이트 재빌드는 매일 자동으로 돌아갑니다.</p><p>사이트와 안드로이드 앱은 운영 중이고 iOS는 심사 중입니다. 기능은 빨리 만들었지만 트래픽과 전환은 아직 과제입니다.</p>
         </div>
       </div>
     </details>
+
   </div>
 </section>
 
@@ -346,8 +309,8 @@
 <section id="skills">
   <div class="wrap">
     <div class="sec-head reveal">
-      <div class="sec-kicker">Tech Stack</div>
-      <div class="sec-title">핵심 기술</div>
+      <div class="sec-kicker">Skills</div>
+      <div class="sec-title">기술</div>
     </div>
     <div class="skill-grid">
       <div class="skill-card reveal">
@@ -432,70 +395,49 @@
 <section id="highlights">
   <div class="wrap">
     <div class="sec-head reveal">
-      <div class="sec-kicker">Impact</div>
-      <div class="sec-title">역할 &amp; 임팩트 하이라이트</div>
+      <div class="sec-kicker">Highlights</div>
+      <div class="sec-title">해 온 일</div>
     </div>
     <div class="hl-grid">
       <div class="hl-card reveal">
-        <div class="ico">🧠</div>
-        <h3>기술 &amp; 제품 리더십</h3>
+        <h3>제품 개발</h3>
         <ul>
-          <li>기획 → 설계 → 개발 → 출시 → 운영까지 End-to-End 책임 수행</li>
-          <li>Flutter, React, Nuxt, Node.js, Swift 등 다양한 스택 병행</li>
-          <li>AI · OpenAI API를 실제 서비스에 접목해 상용화</li>
+          <li>기획부터 출시, 운영까지 직접 맡은 서비스가 여럿 있습니다.</li>
+          <li>Swift, Flutter, Next.js, Nuxt, Node.js, Django, FastAPI를 써 왔습니다.</li>
+          <li>OpenAI와 Claude API를 실제 서비스에 붙여 운영했습니다.</li>
         </ul>
       </div>
       <div class="hl-card reveal">
-        <div class="ico">🔒</div>
-        <h3>정품인증 / 커머스</h3>
+        <h3>정품인증 · 커머스</h3>
         <ul>
-          <li>ASSC, MLB, Weilansong NFC 정품인증 시스템 단독 개발</li>
-          <li>AliExpress · iHerb · Amazon API 연동 어필리에이트 플랫폼 구축</li>
-          <li>가격 비교 · 유사상품 매칭 추천 알고리즘 및 가격 알림 구현</li>
+          <li>ASSC, MLB, Weilansong NFC 정품인증을 개발했습니다.</li>
+          <li>AliExpress, iHerb, Amazon 어필리에이트를 연동했습니다.</li>
+          <li>가격 비교, 비슷한 상품 추천, 가격 알림을 만들었습니다.</li>
         </ul>
       </div>
       <div class="hl-card reveal">
-        <div class="ico">💬</div>
-        <h3>실시간 상담 / 챗봇 / 예약</h3>
+        <h3>상담 · 챗봇 · 예약</h3>
         <ul>
-          <li>Agora 기반 화상상담 서비스(IAM) 전 주기 개발</li>
-          <li>카카오 챗봇 알림 · 정기결제 API 직접 설계 및 배포</li>
-          <li>Timekit 연동 매장별 실시간 예약 시스템 개발</li>
+          <li>Agora 기반 화상상담(IAM)을 처음부터 끝까지 개발했습니다.</li>
+          <li>카카오 챗봇 알림과 정기결제 API를 만들었습니다.</li>
+          <li>Timekit을 연동한 매장 예약 시스템을 만들었습니다.</li>
         </ul>
       </div>
       <div class="hl-card reveal">
-        <div class="ico">🏥</div>
-        <h3>헬스케어 / 병원 시스템</h3>
+        <h3>병원 시스템</h3>
         <ul>
-          <li>전국 다수 병원 모바일 진료카드 · 문진표 · 결제 시스템 개발</li>
-          <li>비콘 · NFC · QR · NicePay 등 의료 · 결제 연동 경험</li>
-          <li>실사용 병원 환경에서 다년간 유지보수 및 신규 기능 개발</li>
+          <li>병원 모바일 진료카드, 문진표, 결제를 개발했습니다.</li>
+          <li>비콘, NFC, QR, NicePay를 연동했습니다.</li>
+          <li>실제 병원에서 여러 해 유지보수했습니다.</li>
         </ul>
       </div>
       <div class="hl-card reveal">
-        <div class="ico">🚀</div>
-        <h3>창업 &amp; 서비스 운영</h3>
+        <h3>창업</h3>
         <ul>
-          <li>페츠(Butler, Metavu, Relow) 창업 및 운영</li>
-          <li>AWS · Firebase · Supabase 인프라 설계 및 비용 효율화</li>
-          <li>AI 코드 어시스턴트 활용 개발 워크플로우 자동화</li>
+          <li>페츠를 창업해 버틀러, Metavu, Relow를 운영했습니다.</li>
+          <li>AWS, Firebase, Supabase 인프라를 직접 운영했습니다.</li>
         </ul>
       </div>
-      <div class="hl-card reveal">
-        <div class="ico">🧭</div>
-        <h3>업무 스타일</h3>
-        <ul>
-          <li>선호 도메인: 헬스케어 / 커머스 / 상담 / 정품인증</li>
-          <li>제품 관점 문제 정의 → 빠른 MVP → 피드백 기반 개선</li>
-          <li>iOS / 풀스택 / PO 역할 병행 가능</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="stats" style="margin-top:30px">
-      <div class="stat reveal"><div class="num grad-text">30+</div><div class="lbl">직접 개발 · 상용화 프로젝트</div></div>
-      <div class="stat reveal"><div class="num grad-text">11년</div><div class="lbl">개발 경력 (2015~)</div></div>
-      <div class="stat reveal"><div class="num grad-text">5+</div><div class="lbl">도메인 (헬스케어·커머스·상담·AI·반려동물)</div></div>
     </div>
   </div>
 </section>
@@ -504,113 +446,113 @@
 <section id="projects">
   <div class="wrap">
     <div class="sec-head reveal">
-      <div class="sec-kicker">Selected Work</div>
-      <div class="sec-title">주요 프로젝트</div>
+      <div class="sec-kicker">Projects</div>
+      <div class="sec-title">프로젝트</div>
     </div>
 
-    <div class="group-label reveal">🐶 벳플럭스 (2026.03 ~ 2026.10)</div>
+    <div class="group-label reveal">벳플럭스 (2026.03 ~ 2026.10)</div>
     <div class="proj-grid">
       <div class="proj reveal">
-        <div class="proj-title">🩺 늘펫케어</div>
+        <div class="proj-title">늘펫케어</div>
         <div class="proj-period">2026.03 ~ 2026.10</div>
         <div class="proj-desc">LLM 기반 채팅으로 수의학적 기준에 따라 반려동물에게 필요한 건강검진 항목을 추천하고, 적합한 병원을 연결해 주는 서비스.</div>
         <div class="stack"><span class="chip">Next.js</span><span class="chip">Django</span><span class="chip">LLM</span></div>
       </div>
       <div class="proj reveal">
-        <div class="proj-title">🐾 DB손해보험 펫블리 AI건강상담</div>
+        <div class="proj-title">DB손해보험 펫블리 AI건강상담</div>
         <div class="proj-period">2026.05 ~ 2026.06 · 제휴</div>
         <div class="proj-desc">LLM 기반 채팅으로 반려동물의 현재 증상을 수의학적으로 추론해 홈케어 가이드를 제공하고, 유사 사례의 보험금 수령 사례를 보여주는 AI 건강상담.</div>
         <div class="stack"><span class="chip">Next.js</span><span class="chip">FastAPI</span><span class="chip">LLM</span></div>
       </div>
       <div class="proj reveal">
-        <div class="proj-title">📞 늘펫: CTI 연동 · 통화 시스템</div>
+        <div class="proj-title">늘펫: CTI 연동 · 통화 시스템</div>
         <div class="proj-period">2026.05 ~ 2026.10 · 유지보수 &amp; 신규</div>
         <div class="proj-desc">기존 050 안심번호 서비스를 회사 내부 쿠버네티스 환경으로 이관·운영하고, 외주사가 개발한 CTI를 자사 서비스와 연동·커스텀화. 세종텔레콤 050 서비스를 통합하고, KT·LG U+ 등과 연동해 녹취·통화 요약 기능을 신규 개발.</div>
         <div class="stack"><span class="chip">CTI</span><span class="chip">050 안심번호</span><span class="chip">세종텔레콤</span><span class="chip">Kubernetes</span><span class="chip">KT</span><span class="chip">LG U+</span><span class="chip">통화 요약</span></div>
       </div>
     </div>
 
-    <div class="group-label reveal">🐾 페츠 (창업)</div>
+    <div class="group-label reveal">페츠 (창업)</div>
     <div class="proj-grid">
       <div class="proj reveal">
-        <div class="proj-title">💊 FitMe <span class="badge-live">LIVE</span></div>
+        <div class="proj-title">FitMe <span class="badge-live">LIVE</span></div>
         <div class="proj-period">운영 중</div>
         <div class="proj-desc">어필리에이트 기반 AI 영양제 추천 서비스.</div>
         <a class="proj-link" href="https://fitme.care" target="_blank" rel="noopener">fitme.care ↗</a>
       </div>
       <div class="proj reveal">
-        <div class="proj-title">🛒 Relow <span class="badge-live">LIVE</span></div>
+        <div class="proj-title">Relow <span class="badge-live">LIVE</span></div>
         <div class="proj-period">운영 중</div>
         <div class="proj-desc">데이터 기반 상품 추천 서비스.</div>
         <a class="proj-link" href="https://relow.io" target="_blank" rel="noopener">relow.io ↗</a>
       </div>
       <div class="proj reveal">
-        <div class="proj-title">🐶 버틀러 (Butler)</div>
+        <div class="proj-title">버틀러 (Butler)</div>
         <div class="proj-period">2022.07 ~ 2025.04 · 종료</div>
         <div class="proj-desc">반려동물 돌봄 중개 서비스. 실시간 위치 추적 기반 펫시터 매칭.</div>
         <div class="stack"><span class="chip">Flutter</span><span class="chip">Django</span><span class="chip">Firebase</span><span class="chip">Supabase</span></div>
       </div>
       <div class="proj reveal">
-        <div class="proj-title">🧬 3D MetaVu</div>
+        <div class="proj-title">3D MetaVu</div>
         <div class="proj-period">2025.05 ~ 2025.09 · 외주</div>
         <div class="proj-desc">3D MetaVu 장비 촬영 데이터를 VTK로 태블릿에서 시각화하는 3D 피부 분석 앱.</div>
         <div class="stack"><span class="chip">Flutter</span><span class="chip">FastAPI</span><span class="chip">VTK.js</span></div>
       </div>
       <div class="proj reveal">
-        <div class="proj-title">💧 Metavu Cloud</div>
+        <div class="proj-title">Metavu Cloud</div>
         <div class="proj-period">2023.03 ~ 2023.04 · 외주</div>
         <div class="proj-desc">병원 내부 서버 전용이던 MarkVu를 클라우드화한 2D 피부 분석 모바일 · 서버.</div>
         <div class="stack"><span class="chip">Swift</span><span class="chip">PHP</span><span class="chip">AWS MySQL</span><span class="chip">S3</span></div>
       </div>
       <div class="proj reveal">
-        <div class="proj-title">❤️ PQ</div>
+        <div class="proj-title">PQ</div>
         <div class="proj-period">2024.06 ~ 2024.11 · 종료</div>
         <div class="proj-desc">베트남 소개팅 앱 서비스. 채팅 · 매칭 기능 구현.</div>
         <div class="stack"><span class="chip">Flutter</span><span class="chip">Django</span></div>
       </div>
     </div>
 
-    <div class="group-label reveal">🧑‍💻 모노랩스</div>
+    <div class="group-label reveal">모노랩스</div>
     <div class="proj-grid">
       <div class="proj reveal">
-        <div class="proj-title">💬 IAM 화상상담</div>
+        <div class="proj-title">IAM 화상상담</div>
         <div class="proj-period">2020.03 ~ 2021.09</div>
         <div class="proj-desc">고객-상담사 실시간 화상상담 및 실시간 상품 동기화. iOS · 웹 · 백엔드 전 영역 개발.</div>
         <div class="stack"><span class="chip">Swift</span><span class="chip">Node.js</span><span class="chip">Nuxt</span><span class="chip">RTC</span></div>
       </div>
       <div class="proj reveal">
-        <div class="proj-title">🔖 ASSC 정품인증</div>
+        <div class="proj-title">ASSC 정품인증</div>
         <div class="proj-period">2019.04 ~ 2020.06</div>
         <div class="proj-desc">Anti Social Social Club NFC 정품인증 iOS 앱. 소셜 로그인, NFC 태그 리딩, 인증 이력 관리.</div>
         <div class="stack"><span class="chip">Swift</span><span class="chip">NFC</span></div>
       </div>
       <div class="proj reveal">
-        <div class="proj-title">🧢 MLB 정품인증</div>
+        <div class="proj-title">MLB 정품인증</div>
         <div class="proj-period">2019.10 ~ 2020.05</div>
         <div class="proj-desc">i18n 다국어를 지원하는 정품인증 웹앱 프론트엔드.</div>
         <div class="stack"><span class="chip">Nuxt</span><span class="chip">i18n</span></div>
       </div>
       <div class="proj reveal">
-        <div class="proj-title">📅 IAM 예약페이지</div>
+        <div class="proj-title">IAM 예약페이지</div>
         <div class="proj-period">2020.12 ~ 2021.01</div>
         <div class="proj-desc">Timekit 연동 매장별 실시간 예약 시스템.</div>
         <div class="stack"><span class="chip">Nuxt</span><span class="chip">Timekit</span></div>
       </div>
       <div class="proj reveal">
-        <div class="proj-title">🤖 IAM 카카오 챗봇 API</div>
+        <div class="proj-title">IAM 카카오 챗봇 API</div>
         <div class="proj-period">2021.12 ~ 2022.05</div>
         <div class="proj-desc">섭취 알림, 연속일수 확인, 정기결제일 조정 기능의 맞춤 챗봇 시스템.</div>
         <div class="stack"><span class="chip">Node.js</span><span class="chip">카카오 챗봇</span></div>
       </div>
       <div class="proj reveal">
-        <div class="proj-title">🌿 Weilansong 정품인증</div>
+        <div class="proj-title">Weilansong 정품인증</div>
         <div class="proj-period">2019.12 ~ 2020.10</div>
         <div class="proj-desc">정품인증 성공/실패 결과를 노출하는 웹 프론트엔드.</div>
         <div class="stack"><span class="chip">Nuxt</span></div>
       </div>
     </div>
 
-    <div class="group-label reveal">🏥 공간소프트 · 병원/공공</div>
+    <div class="group-label reveal">공간소프트 · 병원/공공</div>
     <div class="table-wrap reveal">
       <table>
         <thead><tr><th>병원 / 기관</th><th>기간</th><th>주요 기능</th></tr></thead>
@@ -631,10 +573,10 @@
       </table>
     </div>
 
-    <div class="group-label reveal">💘 케어랩스 · iOS</div>
+    <div class="group-label reveal">케어랩스 · iOS</div>
     <div class="proj-grid">
       <div class="proj reveal">
-        <div class="proj-title">💞 소개팅 앱 시리즈</div>
+        <div class="proj-title">소개팅 앱 시리즈</div>
         <div class="proj-period">2018.02 ~ 2019.04</div>
         <div class="proj-desc">당연시 · 스윗미 · 사랑애 · 단하나 소개팅 앱. 라운지/피드, 프사 월드컵, 내 주변 이성 찾기, 매력평가, 성향분석.</div>
         <div class="stack"><span class="chip">Objective-C</span><span class="chip">위치기반</span></div>
@@ -647,244 +589,148 @@
 <section id="case-studies">
   <div class="wrap">
     <div class="sec-head reveal">
-      <div class="sec-kicker">Deep Dive</div>
-      <div class="sec-title">프로젝트 케이스 스터디</div>
-      <p class="cs-note">문제 → 접근 → 어려웠던 점 → 해결 → 결과</p>
+      <div class="sec-kicker">Case Studies</div>
+      <div class="sec-title">회사에서 한 일 자세히</div>
     </div>
 
-    <!-- CS 펫블리 -->
     <details class="cs reveal" open>
       <summary>
         <div class="cs-head">
-          <h3>DB손해보험 펫블리 AI 건강상담: 증상 추론과 보험금 사례 매칭</h3>
+          <h3>DB손해보험 펫블리 AI 건강상담</h3>
           <div class="cs-sub">2026.05 ~ 2026.06 · 벳플럭스 · DB손해보험 제휴</div>
           <div class="cs-stack"><span class="chip">Next.js</span><span class="chip">FastAPI</span><span class="chip">LLM</span></div>
         </div>
       </summary>
       <div class="cs-body">
+        
         <div class="step">
-          <span class="step-label"><span class="n">1</span>문제</span>
-          <p>강아지가 아프면 보호자가 궁금한 건 세 가지다. 병원에 당장 가야 하나, 집에서 뭘 해주면 되나, 보험 처리는 되나. 지금까지는 이걸 각각 다른 곳에서 찾아봐야 했다.</p>
+          <span class="step-label"><span class="n">1</span>배경</span>
+          <p>반려동물이 아플 때 보호자는 병원에 가야 하는지, 집에서 뭘 해야 하는지, 보험이 되는지를 각각 따로 찾아봐야 했습니다.</p>
         </div>
         <div class="step">
-          <span class="step-label"><span class="n">2</span>접근</span>
-          <p>채팅 하나에서 증상을 듣고, 홈케어 가이드를 주고, 비슷한 증상으로 실제 보험금을 받은 사례까지 보여주기로 했다. 증상 추론은 LLM이 맡되 수의학 근거 범위를 벗어난 말은 못 하게 프롬프트와 출력 형식을 묶었다.</p>
+          <span class="step-label"><span class="n">2</span>한 일</span>
+          <p>채팅으로 증상을 듣고 홈케어 방법을 안내한 뒤, 비슷한 증상으로 보험금을 받은 사례를 보여주는 상담을 만들었습니다. LLM이 답하는 범위는 수의학 근거 안으로 제한했습니다. 기획자 한 명과 둘이 진행했고, 개발은 프론트엔드부터 백엔드, LLM 연동까지 혼자 했습니다.</p>
         </div>
         <div class="step">
-          <span class="step-label"><span class="n">3</span>RAG를 안 쓴 이유</span>
-          <p>고객사 요청은 RAG였다. 그런데 보험금 사례 데이터가 10만 건이 안 됐다. 이 규모면 임베딩하고 벡터 DB를 붙이는 것보다 직접 매칭하는 쪽이 빠르고 싸다. 무엇보다 "왜 이 사례가 나왔는지"를 설명할 수 있어야 보험사도 보호자도 믿는다고 봤다. 그래서 검색은 알고리즘으로 짜고 LLM은 앞뒤에만 붙였다.</p>
+          <span class="step-label"><span class="n">3</span>RAG 대신 직접 매칭</span>
+          <p>고객사는 처음에 RAG를 요청했습니다. 하지만 보험금 데이터가 10만 건이 안 돼서, 벡터 DB 없이 직접 매칭하는 편이 빠르고 비용도 적다고 판단했습니다. 왜 그 사례가 나왔는지 설명할 수 있다는 점도 컸습니다.</p>
         </div>
         <div class="step">
-          <span class="step-label"><span class="n">4</span>매칭 방식</span>
+          <span class="step-label"><span class="n">4</span>매칭 순서</span>
           <ul>
-            <li>LLM이 대화에서 증상 키워드를 뽑는다</li>
-            <li>키워드를 질병코드로 바꾼다</li>
-            <li>질병코드로 보험금 사례를 찾고 가중치 점수를 매겨 후보를 추린다</li>
-            <li>상위 후보 중 실제 상황에 맞는 사례를 LLM이 마지막으로 고른다</li>
+            <li>LLM이 대화에서 증상 키워드를 뽑습니다.</li>
+            <li>키워드를 질병코드로 바꿉니다.</li>
+            <li>질병코드로 보험금 사례를 찾고 가중치 점수로 후보를 추립니다.</li>
+            <li>후보 중 상황에 맞는 사례를 LLM이 최종으로 고릅니다.</li>
           </ul>
-          <p>중간 단계가 결정적이라 같은 증상이면 같은 후보가 나온다. 결과가 이상하면 어느 단계에서 틀렸는지 바로 보인다.</p>
         </div>
         <div class="step">
           <span class="step-label"><span class="n">5</span>결과</span>
-          <p>증상 상담, 홈케어, 보험 사례가 한 채팅으로 이어지는 상담을 DB손해보험 제휴 서비스로 약 한 달 만에 개발하고 연동까지 끝냈다.</p>
+          <p>DB손해보험 제휴 서비스로 약 한 달 만에 개발과 연동을 마쳤습니다. 검색 단계가 규칙 기반이라 같은 증상이면 같은 후보가 나왔고, 결과가 이상할 때 어느 단계에서 틀렸는지 찾기 쉬웠습니다.</p>
         </div>
       </div>
     </details>
 
-    <!-- CS 늘펫케어 -->
     <details class="cs reveal" open>
       <summary>
         <div class="cs-head">
-          <h3>늘펫케어: LLM 기반 반려동물 건강검진 추천 &amp; 병원 연결</h3>
-          <div class="cs-sub">2026 · 벳플럭스 · LLM 기반 신규 서비스 개발</div>
+          <h3>늘펫케어: 반려동물 건강검진 추천과 병원 연결</h3>
+          <div class="cs-sub">2026 · 벳플럭스 · 신규 서비스</div>
           <div class="cs-stack"><span class="chip">Next.js</span><span class="chip">Django</span><span class="chip">LLM</span></div>
         </div>
       </summary>
       <div class="cs-body">
+        
         <div class="step">
-          <span class="step-label"><span class="n">1</span>문제</span>
-          <p>보호자는 반려동물에게 어떤 건강검진이 필요한지, 어느 병원에 가야 하는지 판단하기 어렵다. 품종·나이·증상에 따라 권장 검진이 달라지지만, 일반 보호자가 이를 수의학적으로 가늠하기는 쉽지 않았다.</p>
+          <span class="step-label"><span class="n">1</span>배경</span>
+          <p>보호자는 반려동물에게 어떤 건강검진이 필요한지, 어느 병원에 가야 하는지 판단하기 어렵습니다. 품종, 나이, 증상에 따라 필요한 검진이 달라지기 때문입니다.</p>
         </div>
         <div class="step">
-          <span class="step-label"><span class="n">2</span>접근</span>
-          <ul>
-            <li>보호자용 서비스와 동물병원용 사이트가 분리된 구조에서, 양쪽을 잇는 추천·연결 흐름을 설계</li>
-            <li>채팅 형태의 대화로 보호자가 반려동물 정보를 자연스럽게 입력하도록 설계</li>
-            <li>LLM이 수의학적 기준에 따라 필요한 건강검진 항목을 추론·추천하도록 구성</li>
-            <li>추천 결과에 맞춰 적합한 동물병원을 연결하는 흐름까지 한 번에 제공</li>
-          </ul>
+          <span class="step-label"><span class="n">2</span>한 일</span>
+          <p>채팅으로 반려동물 정보를 받고, LLM이 필요한 검진 항목을 추천한 뒤 맞는 병원까지 연결하는 서비스를 만들었습니다. 보호자용 서비스와 병원용 사이트를 잇는 흐름도 함께 설계했습니다.</p>
         </div>
         <div class="step">
           <span class="step-label"><span class="n">3</span>어려웠던 점</span>
-          <ul>
-            <li>의료성 정보인 만큼 LLM이 근거 없는 검진을 권하는 환각을 막아야 함</li>
-            <li>품종·나이·증상 조합이 다양해 추천 기준을 일관되게 유지하기 어려움</li>
-            <li>정해진 폼이 아닌 자유형 대화라, 대화가 길어질수록 LLM이 이미 했던 질문이나 비슷한 질문을 다시 묻는 문제가 발생</li>
-          </ul>
+          <p>처음에는 자유 대화로 만들었더니 대화가 길어질수록 LLM이 이미 한 질문을 다시 했습니다. 품종, 나이, 증상을 순서대로 묻는 흐름으로 바꿔서 해결했습니다. 근거 없는 검진을 권하지 않도록 추천은 수의학 기준과 검진 데이터 안에서만 하게 했습니다.</p>
         </div>
         <div class="step">
-          <span class="step-label"><span class="n">4</span>해결</span>
-          <ul>
-            <li>수의학적 기준·검진 데이터를 근거로 삼아 LLM이 그 범위 안에서 추천하도록 제약</li>
-            <li>완전 자유형 대화 대신 필요한 정보(품종·나이·증상)를 단계적으로 수집하는 구조화된 대화 흐름으로 전환해, 중복·반복 질문을 방지하고 추천 일관성을 확보</li>
-            <li>추천 항목과 병원 정보를 연결해 보호자가 바로 다음 행동으로 이어지도록 구현</li>
-          </ul>
-        </div>
-        <div class="step">
-          <span class="step-label"><span class="n">5</span>결과</span>
-          <ul>
-            <li>보호자가 채팅만으로 필요한 건강검진과 병원을 안내받는 신규 서비스를 구축</li>
-            <li>AI 도구를 활용하되 LLM 추천 흐름·근거 제약 설계는 직접 판단해 구현</li>
-            <li>수의학적 추천 + 병원 연결이라는 반려동물 헬스케어 흐름을 서비스화</li>
-          </ul>
+          <span class="step-label"><span class="n">4</span>결과</span>
+          <p>보호자가 채팅만으로 필요한 검진과 병원을 안내받을 수 있게 됐습니다.</p>
         </div>
       </div>
     </details>
 
-    <!-- CS 1 -->
     <details class="cs reveal" open>
       <summary>
         <div class="cs-head">
-          <h3>IAM 화상상담: 영양제 소분 서비스 비대면 상담 플랫폼</h3>
-          <div class="cs-sub">2020.03 ~ 2021.09 · 풀스택 &amp; Product Owner · iOS · 웹 · 백엔드 전 영역 단독 개발</div>
-          <div class="cs-stack"><span class="chip">Swift</span><span class="chip">Node.js</span><span class="chip">Nuxt</span><span class="chip">Agora WebRTC</span><span class="chip">Firestore</span></div>
+          <h3>IAM 화상상담: 영양제 소분 서비스 비대면 상담</h3>
+          <div class="cs-sub">2020.03 ~ 2021.09 · 모노랩스 · 풀스택 & PO</div>
+          <div class="cs-stack"><span class="chip">Swift</span><span class="chip">Node.js</span><span class="chip">Nuxt</span><span class="chip">Agora</span><span class="chip">Firestore</span></div>
         </div>
       </summary>
       <div class="cs-body">
+        
         <div class="step">
-          <span class="step-label"><span class="n">1</span>문제</span>
-          <p>규제 샌드박스 실증으로 진행한 영양제 소분 서비스는 영양사·약사의 대면/비대면 상담이 필수였다. 회사는 이를 위해 비대면 상담 플랫폼을 구축하기로 했고, 고객과 상담사가 실시간으로 얼굴을 보며 상담할 수 있는 화상상담 채널이 필요했다.</p>
+          <span class="step-label"><span class="n">1</span>배경</span>
+          <p>영양제 소분 서비스가 규제 샌드박스 실증을 하면서 영양사·약사 상담이 필수가 됐고, 고객과 상담사가 얼굴을 보며 상담할 화상 채널이 필요했습니다.</p>
         </div>
         <div class="step">
-          <span class="step-label"><span class="n">2</span>접근</span>
-          <ul>
-            <li>상담사는 전용 iOS 앱, 고객은 설치 없이 접근하는 웹으로 분리해 진입 장벽을 낮춤</li>
-            <li>화상 통신은 WebRTC를 직접 구현하는 대신 Agora를 도입해 안정적인 영상 품질을 확보</li>
-            <li>상담 상태·상품 정보 동기화는 실시간 채널로 처리하되, 처음엔 소켓 채널을 검토</li>
-          </ul>
+          <span class="step-label"><span class="n">2</span>한 일</span>
+          <p>상담사는 iOS 앱, 고객은 설치 없이 웹으로 들어오도록 나눴습니다. 영상은 iOS와 웹 사이 WebRTC를 직접 구현하는 대신 Agora를 썼습니다.</p><p>상담 상태 동기화는 처음에 소켓을 검토했지만 재연결과 서버 관리 부담이 커서 Firestore 리스너로 바꿨습니다. 앱, 웹, 서버가 같은 상태를 보게 되면서 화면이 어긋나는 문제도 없어졌습니다.</p>
         </div>
         <div class="step">
-          <span class="step-label"><span class="n">3</span>어려웠던 점</span>
-          <ul>
-            <li>iOS·웹 간 WebRTC를 자체 구현할 경우 미디어 호환성·네트워크 환경 차이로 연결 안정성을 보장하기 어려움</li>
-            <li>상담 상태 동기화를 소켓으로 직접 운영하면 연결 관리·재연결·서버 부하 등 유지보수 부담이 큼</li>
-            <li>비대면 의료성 상담인 만큼 연결이 끊기거나 상태가 어긋나면 상담 신뢰성에 직접 영향</li>
-          </ul>
-        </div>
-        <div class="step">
-          <span class="step-label"><span class="n">4</span>해결</span>
-          <ul>
-            <li>WebRTC는 Agora를 활용해 직접 구현 부담을 줄이고 영상 연결 안정성을 확보</li>
-            <li>실시간 상태 동기화는 소켓 대신 Firestore 리스너로 했다. 연결 끊김을 직접 관리할 일이 없어져서 유지보수가 훨씬 편해졌다</li>
-            <li>iOS·웹·백엔드가 동일한 Firestore 상태를 구독하는 구조로 통일해 화면 불일치를 방지</li>
-          </ul>
-        </div>
-        <div class="step">
-          <span class="step-label"><span class="n">5</span>결과</span>
-          <ul>
-            <li>규제 샌드박스 실증용 비대면 영양제 소분 상담 플랫폼을 신규로 구축·안착</li>
-            <li>소켓 대신 Firestore + Agora 조합으로 유지보수 부담을 낮춘 안정적인 화상상담 채널을 운영</li>
-            <li>상담사 앱 + 고객 웹 + 백엔드까지 1인이 전 주기를 책임지며 약 7개월간 안정 운영, 이후 예약·챗봇 등 후속 기능으로 확장하는 기반이 됨</li>
-          </ul>
+          <span class="step-label"><span class="n">3</span>결과</span>
+          <p>iOS, 웹, 백엔드를 혼자 맡아 약 7개월 운영했고, 이후 예약 페이지와 카카오 챗봇으로 이어졌습니다.</p>
         </div>
       </div>
     </details>
 
-    <!-- CS 2 -->
     <details class="cs reveal" open>
       <summary>
         <div class="cs-head">
-          <h3>늘펫 CTI 연동: 050 안심번호 통화에 녹취·요약 붙이기</h3>
-          <div class="cs-sub">2026.05 ~ 2026.10 · 벳플럭스 · 유지보수 &amp; 신규 개발</div>
-          <div class="cs-stack"><span class="chip">CTI</span><span class="chip">050 안심번호</span><span class="chip">세종텔레콤</span><span class="chip">Kubernetes</span><span class="chip">KT</span><span class="chip">LG U+</span><span class="chip">통화 요약</span></div>
+          <h3>늘펫 CTI 연동: 안심번호 통화에 녹취와 요약 붙이기</h3>
+          <div class="cs-sub">2026.05 ~ 2026.10 · 벳플럭스 · 유지보수 & 신규 개발</div>
+          <div class="cs-stack"><span class="chip">Kubernetes</span><span class="chip">CTI</span><span class="chip">050 안심번호</span><span class="chip">KT·LG U+</span><span class="chip">LLM 요약</span></div>
         </div>
       </summary>
       <div class="cs-body">
+        
         <div class="step">
-          <span class="step-label"><span class="n">1</span>문제</span>
-          <p>기존 늘펫 서비스는 050 안심번호를 통해 상담 통화를 제공했지만, 050 방식 자체의 제약이 있어 통신 3사 CTI와의 연결이 필요했다. 외주사가 기본적인 CTI만 개발해 제공했으나, 회사가 실제로 쓰는 요구사항과는 달라 회사 요구사항에 맞춰 직접 개발을 진행해야 했다. 또한 타 프로젝트에서도 같은 서비스를 함께 쓰기 위해, 세종텔레콤의 050 서비스를 외주사가 만든 서비스에 통합할 필요가 있었다.</p>
+          <span class="step-label"><span class="n">1</span>배경</span>
+          <p>늘펫은 050 안심번호로 상담 통화를 연결했는데, 통신사 CTI와 연동이 필요했습니다. 외주사가 만든 CTI는 회사 요구사항과 맞지 않았고, 다른 프로젝트에서도 같이 쓰려면 세종텔레콤 050 서비스도 합쳐야 했습니다.</p>
         </div>
         <div class="step">
-          <span class="step-label"><span class="n">2</span>접근</span>
-          <ul>
-            <li>기존 050 안심번호 서비스를 회사 내부 쿠버네티스 환경으로 이관해 직접 운영·유지보수</li>
-            <li>외주사가 개발한 CTI를 자사 서비스 구조에 맞게 연동하고 커스텀화</li>
-            <li>타 프로젝트와 공용하기 위해 세종텔레콤 050 서비스를 외주사 서비스에 통합</li>
-            <li>KT·LG U+ 등 통신사와 연동해 녹취·통화 요약 기능을 신규 설계</li>
-          </ul>
+          <span class="step-label"><span class="n">2</span>한 일</span>
+          <p>050 서비스를 회사 쿠버네티스 환경으로 옮겨 직접 운영했습니다. 쿠버네티스는 처음이라 환경을 파악하는 데 시간이 꽤 들었습니다. 외주 CTI는 우리 서비스에 맞게 고치고, KT와 LG U+의 연동 방식 차이는 중간 계층을 두고 맞췄습니다. 녹취 파일에는 LLM 통화 요약을 붙였습니다.</p>
         </div>
         <div class="step">
-          <span class="step-label"><span class="n">3</span>어려웠던 점</span>
-          <ul>
-            <li>기존 050 서비스를 회사 내부 쿠버네티스 환경으로 이관해야 했는데, 쿠버네티스 기반이라 환경 파악·운영 난이도가 높았음</li>
-            <li>외주 CTI와 자사 서비스의 데이터·연동 규격이 달라 그대로 붙이기 어려움</li>
-            <li>통신사(KT·LG U+)마다 연동 방식·규격이 달라 각각 맞춰야 하고, 실제 통화·녹취라 안정성·데이터 정합성 보장이 필수</li>
-          </ul>
-        </div>
-        <div class="step">
-          <span class="step-label"><span class="n">4</span>해결</span>
-          <ul>
-            <li>회사 내부 쿠버네티스 환경을 파악해 050 서비스를 이관·운영하며 인프라 운영 역량을 확보</li>
-            <li>외주 CTI를 자사 서비스에 맞춰 커스텀 연동 레이어를 구성해 통합하고, 통신사별 차이를 흡수하는 구조로 KT·LG U+ 연동을 안정화</li>
-            <li>녹취 데이터에 LLM 기반 통화 요약을 결합해 상담 내용을 자동 정리</li>
-          </ul>
-        </div>
-        <div class="step">
-          <span class="step-label"><span class="n">5</span>결과</span>
-          <ul>
-            <li>안심번호로 전화만 이어주던 걸, 녹취와 통화 요약까지 남는 상담 시스템으로 바꿨다</li>
-            <li>통화 데이터를 자산화해 상담 품질 관리·효율화의 기반을 마련</li>
-            <li>외주 CTI·통신사 연동·LLM 요약을 아우르는 통합 통화 시스템을 구축</li>
-          </ul>
+          <span class="step-label"><span class="n">3</span>결과</span>
+          <p>전화만 연결해 주던 안심번호가 녹취와 통화 요약까지 남는 상담 시스템이 됐습니다.</p>
         </div>
       </div>
     </details>
 
-    <!-- CS 3 -->
     <details class="cs reveal" open>
       <summary>
         <div class="cs-head">
-          <h3>병원 모바일 시스템: 비콘·NFC·결제 기반 진료 편의</h3>
-          <div class="cs-sub">2015 ~ 2017 · 공간소프트 · iOS &amp; 백엔드 · 선병원·차병원·포항성모병원 등</div>
+          <h3>병원 모바일 시스템: 비콘·NFC·모바일 결제</h3>
+          <div class="cs-sub">2015 ~ 2017 · 공간소프트 · iOS & 백엔드</div>
           <div class="cs-stack"><span class="chip">Objective-C</span><span class="chip">PHP</span><span class="chip">Java(JSP)</span><span class="chip">Beacon</span><span class="chip">NFC</span><span class="chip">NicePay</span></div>
         </div>
       </summary>
       <div class="cs-body">
+        
         <div class="step">
-          <span class="step-label"><span class="n">1</span>문제</span>
-          <p>대형 병원은 접수·대기·수납이 창구에 몰려 대기 시간이 길고 위치 안내가 어려웠다. 진료카드·문진표·영수증 등 종이 절차도 비효율적이어서 모바일로 병원 동선을 자동화할 필요가 있었다.</p>
+          <span class="step-label"><span class="n">1</span>배경</span>
+          <p>대형 병원은 접수, 대기, 수납이 창구에 몰려 있었고 진료카드, 문진표, 영수증도 모두 종이였습니다.</p>
         </div>
         <div class="step">
-          <span class="step-label"><span class="n">2</span>접근</span>
-          <ul>
-            <li>병원 곳곳에 비콘을 설치해 환자 위치를 인식, 도착 시 자동 대기 등록·대기표 발권</li>
-            <li>NFC·QR로 진료카드를 모바일화하고 NicePay를 연동해 모바일 수납·영수증 출력까지 처리</li>
-            <li>병원별 시스템(Oracle/JSP 등)과 연동되도록 백엔드·iOS를 함께 개발</li>
-          </ul>
+          <span class="step-label"><span class="n">2</span>한 일</span>
+          <p>환자가 도착하면 비콘으로 인식해 대기 등록과 대기표 발권을 자동으로 했고, NFC·QR 진료카드와 NicePay 모바일 결제를 붙였습니다. 병원마다 Oracle, JSP 등 기존 시스템이 달라서 공통 모듈과 병원별 연동 부분을 나눠 만들었습니다. 비콘은 실내에서 신호가 불안정해 현장에서 도착 판정 기준을 여러 번 조정했습니다.</p>
         </div>
         <div class="step">
-          <span class="step-label"><span class="n">3</span>어려웠던 점</span>
-          <ul>
-            <li>병원마다 레거시 시스템·데이터 규격이 모두 달라 매번 연동 방식을 새로 맞춰야 함</li>
-            <li>비콘 신호가 실내 환경(벽·인파)에서 불안정해 위치 인식 오차 발생</li>
-            <li>결제·의료 정보를 다루는 만큼 결제 실패·중복 처리 등 예외 상황을 안정적으로 차단해야 함</li>
-          </ul>
-        </div>
-        <div class="step">
-          <span class="step-label"><span class="n">4</span>해결</span>
-          <ul>
-            <li>병원 공통 모듈과 병원별 커스텀 레이어를 분리해 다수 병원에 반복 적용 가능한 구조로 정리</li>
-            <li>비콘 신호 임계값·도착 판정 로직을 현장 환경에 맞춰 튜닝해 오인식을 감소</li>
-            <li>NicePay 결제 흐름에 상태 검증·영수증 출력 처리를 더해 결제 신뢰성을 확보</li>
-          </ul>
-        </div>
-        <div class="step">
-          <span class="step-label"><span class="n">5</span>결과</span>
-          <ul>
-            <li>전국 10개 병원에 모바일 진료 시스템을 적용해 접수·대기·수납을 비대면화</li>
-            <li>다년간 실사용 환경에서 유지보수·신규 기능을 개발하며 안정적으로 운영</li>
-            <li>비콘·NFC·결제 등 하드웨어·금융 연동 경험을 폭넓게 확보</li>
-          </ul>
+          <span class="step-label"><span class="n">3</span>결과</span>
+          <p>선병원, 차병원, 포항성모병원 등 병원 10곳에 적용했고, 2017년까지 유지보수와 기능 추가를 이어갔습니다.</p>
         </div>
       </div>
     </details>
